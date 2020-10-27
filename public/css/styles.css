@@ -137,9 +137,8 @@ button {
 
 .burguer-button {
   width: 2rem;
-  height: auto;
+  height: 2rem;
   position: relative;
-  background-color: pink;
   cursor: var(--cursor-button);
   display: var(--display-button); }
   .burguer-button__line, .burguer-button__line::before, .burguer-button__line::after {
@@ -147,7 +146,8 @@ button {
     height: .25rem;
     position: absolute;
     border-radius: 1.25rem;
-    background-color: var(--color-line-inner); }
+    background-color: var(--color-line-inner);
+    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s; }
   .burguer-button__line {
     top: 50%;
     transform: translateY(-50%); }
@@ -158,6 +158,14 @@ button {
     top: -200%; }
   .burguer-button__line::after {
     top: 200%; }
+
+.cruz {
+  transform: rotateZ(45deg);
+  top: 43%; }
+  .cruz::before {
+    transform: rotateZ(90deg); }
+  .cruz::before, .cruz::after {
+    top: 0; }
 
 .main-nav {
   padding: 1rem;

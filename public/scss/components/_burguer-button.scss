@@ -11,9 +11,9 @@
 
 .burguer-button {
     width: 2rem;
-    height: auto;
+    height: 2rem;
     position: relative;
-    background-color: pink;
+    // background-color: pink;
     cursor: var(--cursor-button);
     display: var(--display-button);
 
@@ -25,7 +25,7 @@
         position: absolute;
         border-radius: 1.25rem;
         background-color: var(--color-line-inner);
-        // transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
+        transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s;
     }
 
     &__line {
@@ -48,19 +48,21 @@
     }
 }
 
-// .cruz {
-//     transform: rotateZ(45deg);
-//     top: 43%;
+.cruz {
+    transform: rotateZ(45deg);
+    top: 43%;
 
-//     &::before {
-//         transform: rotateZ(90deg);
-//     }
+    &::before {
+        transform: rotateZ(90deg);
+    }
 
-//     &::before,
-//     &::after {
-//         top: 0;
-//     }
-// }
+    &::before,
+    &::after {
+        top: 0;
+    }
+}
+
+
 
 
 
