@@ -1,24 +1,24 @@
 :root {
   --max-width: 1270px;
   --min-width: 320px;
-  --header-height: 4rem; }
+  --height-header: 4rem; }
   @media screen and (min-width: 1600px) {
     :root {
-      --header-height: 4.5rem; } }
+      --height-header: 4.5rem; } }
 
 :root {
-  --body-font-family: 'Open Sans', sans-serif;
-  --h-font-family: 'News Cycle', sans-serif; }
+  --font-family-h: 'News Cycle', sans-serif;
+  --font-family-body: 'Open Sans', sans-serif; }
 
 :root {
-  --body-font-size: .9rem;
-  --small-font-size: .75rem;
-  --h1-font-size: 2rem; }
+  --font-size-h1: 2rem;
+  --font-size-body: .9rem;
+  --font-size-small: .75rem; }
   @media screen and (min-width: 960px) {
     :root {
-      --body-font-size: 1rem;
-      --small-font-size: .8rem;
-      --h1-font-size: 2.5rem; } }
+      --font-size-h1: 2.5rem;
+      --font-size-body: 1rem;
+      --font-size-small: .8rem; } }
 
 :root {
   --cursor-button: default; }
@@ -40,8 +40,8 @@
 
 body {
   margin: 0;
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size); }
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body); }
 
 a {
   outline: none;
@@ -54,10 +54,10 @@ img {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: var(--h-font-family); }
+  font-family: var(--font-family-h); }
 
 h1 {
-  font-size: var(--h1-font-size); }
+  font-size: var(--font-size-h1); }
 
 button {
   padding: 0;
@@ -73,26 +73,93 @@ button {
   button::-moz-focus-inner {
     border: 0; }
 
+.container {
+  text-align: center; }
+
 .container,
 .main-layout {
-  display: grid;
-  grid-row-gap: .5rem; }
+  display: grid; }
+
+.main-layout {
+  grid-row-gap: .3rem; }
+
+.main-header-layout {
+  --padding-main-header: 0 .8rem 0 .3rem; }
+  @media screen and (min-width: 960px) {
+    .main-header-layout {
+      --padding-main-header: 0 1rem 0 .5rem; } }
+
+.main-header-layout {
+  display: flex;
+  align-items: center;
+  height: var(--height-header);
+  padding: var(--padding-main-header); }
 
 .main-layout {
   padding: 3rem;
-  text-align: center;
   background-color: lightpink; }
 
 .main-header {
-  text-align: center;
-  height: var(--header-height);
-  line-height: var(--header-height);
-  background-color: yellowgreen; }
+  --width-logo: 3.6rem;
+  --font-size-title: 1.2rem;
+  --font-size-subtitle: 1rem;
+  --font-family: 'Amaranth', sans-serif; }
+
+.main-header__logo {
+  height: auto;
+  margin-right: .3rem;
+  width: var(--width-logo); }
+
+.main-header__name-site {
+  margin-right: auto; }
+
+.main-header__title, .main-header__subtitle {
+  font-weight: 400;
+  font-family: var(--font-family); }
+
+.main-header__title {
+  font-size: var(--font-size-title); }
+
+.main-header__subtitle {
+  margin: 0;
+  font-size: var(--font-size-subtitle); }
+
+.burguer-button {
+  --cursor-button: none;
+  --color-line-inner: #094293;
+  --display-button: visibility; }
+  @media screen and (min-width: 960px) {
+    .burguer-button {
+      --display-button: none;
+      --cursor-button: pointer; } }
+
+.burguer-button {
+  width: 2rem;
+  height: auto;
+  position: relative;
+  background-color: pink;
+  cursor: var(--cursor-button);
+  display: var(--display-button); }
+  .burguer-button__line, .burguer-button__line::before, .burguer-button__line::after {
+    width: 100%;
+    height: .25rem;
+    position: absolute;
+    border-radius: 1.25rem;
+    background-color: var(--color-line-inner); }
+  .burguer-button__line {
+    top: 50%;
+    transform: translateY(-50%); }
+  .burguer-button__line::before, .burguer-button__line::after {
+    content: '';
+    right: 0; }
+  .burguer-button__line::before {
+    top: -200%; }
+  .burguer-button__line::after {
+    top: 200%; }
 
 .main-nav {
   padding: 1rem;
   color: white;
-  text-align: center;
   background-color: lightseagreen; }
 
 [class*="section-"] {
@@ -105,10 +172,8 @@ button {
 .aside {
   padding: 1rem;
   color: white;
-  text-align: center;
   background-color: crimson; }
 
 .footer {
   background-color: lightsteelblue;
-  text-align: center;
   padding: 1rem; }

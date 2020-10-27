@@ -9,21 +9,32 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <!-- body-font-family -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet" />
     <!-- h-font-family -->
     <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- title and subtitle font family -->
+    <link href="https://fonts.googleapis.com/css?family=Amaranth:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Contenedor general del proyecto. -->
     <div class="container">
         <!-- Cabecera de la página. -->
-        <header class="main-header">
-            <h1>HEADER</h1>
+        <header class="main-header main-header-layout" id="main-header">
+            <!-- Logo Visión Vida y Poder -->
+            <a href="#"><img src="img/logos/logo-iglesia-vision-vida-y-poder.png" alt="Logo Iglesia Cristiana Visi&oacute;n Vida y Poder" class="main-header__logo"></a>
+            <!-- Título y subtítulo del Sitio Web -->
+            <div class="main-header__name-site">
+                <h1 class="main-header__title"><a href="#">Visi&oacute;n Vida y Poder</a></h1>
+                <p class="main-header__subtitle"><a href="#">Iglesia Cristiana</a></p>
+            </div>
+            <!-- Burguer button -->
+            <div class="burguer-button">
+                <div class="burguer-button__line"></div>
+            </div>
         </header>
         <!-- Menú principal de navegación. -->
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav">
             <h1>NAV</h1>
         </nav>
         <!-- Contenido principal de la página. -->

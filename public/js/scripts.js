@@ -1,1 +1,5 @@
-console.log('Hola, bienvenido a Visión Vida y Poder, Iglesia Cristiana')
+// const header = document.getElementById('main-header')
+// const nav = document.getElementById('main-nav')
+
+// header.appendChild(nav)
+

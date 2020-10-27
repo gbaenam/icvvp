@@ -1,12 +1,41 @@
-// Cabecera principal de la página
 
+// Variables locales
 .main-header {
-    text-align: center;
-    height: var(--header-height);
-    line-height: var(--header-height);
-    background-color: yellowgreen;
+    --width-logo: 3.6rem;
+    --font-size-title: 1.2rem;
+    --font-size-subtitle: 1rem;
+    --font-family: 'Amaranth', sans-serif;
 }
 
+.main-header {
+    // background-color: yellowgreen;
+
+    &__logo {
+        height: auto;
+        margin-right: .3rem;
+        width: var(--width-logo);
+    }
+
+    // Contenedor Title y Subtitle
+    &__name-site {
+        margin-right: auto;
+    }
+
+    &__title,
+    &__subtitle {
+        font-weight: 400;
+        font-family: var(--font-family);
+    }
+
+    &__title {
+        font-size: var(--font-size-title);
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-size: var(--font-size-subtitle);
+    }
+}
 
 
 
