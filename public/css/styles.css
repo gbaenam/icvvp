@@ -168,9 +168,16 @@ button {
     top: 0; }
 
 .main-nav {
-  padding: 1rem;
+  width: 80vw;
   color: white;
-  background-color: lightseagreen; }
+  position: fixed;
+  left: -80vw;
+  transition: left .6s;
+  top: var(--height-header);
+  background-color: lightseagreen;
+  height: calc(100vh - var(--height-header)); }
+  .main-nav__move {
+    left: 0; }
 
 [class*="section-"] {
   padding: .6rem;

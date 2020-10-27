@@ -1,11 +1,17 @@
 // Menú principal de navegación.
 
 .main-nav {
-    padding: 1rem;
+    width: 80vw;
     color: white;
+    position: fixed;
+    left: -80vw;
+    transition: left .6s;
+    top: var(--height-header);
     background-color: lightseagreen;
+    height: calc(100vh - #{var(--height-header)});
 
-    // position: fixed;
-    // height: 100%;
+    &__move {
+        left: 0;
+    }
 }
 

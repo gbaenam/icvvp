@@ -8,7 +8,7 @@ const   header = document.getElementById('main-header'),
 // Hamburger button animation
 burguerButton.addEventListener('click', () => {
     burguerLine.classList.toggle('cruz')
-    // Código para mover el nav
+    nav.classList.toggle('main-nav__move')
 })
 
 // Inserting the nav into the header
