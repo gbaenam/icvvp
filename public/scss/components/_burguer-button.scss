@@ -1,13 +1,11 @@
 
 // Variables locales
 .burguer-button {
-    --cursor-button: none;
     --color-line-inner: #094293;
     --display-button: visibility;
 
     @include from(xmedium) {
         --display-button: none;
-        --cursor-button: pointer;
     }
 }
 

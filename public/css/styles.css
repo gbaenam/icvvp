@@ -101,6 +101,7 @@ button {
 
 .main-header {
   --width-logo: 3.6rem;
+  --font-color: #094293;
   --font-size-title: 1.3rem;
   --font-size-subtitle: 1.1rem;
   --font-family: 'Amaranth', sans-serif; }
@@ -124,14 +125,15 @@ button {
   margin: 0;
   font-size: var(--font-size-subtitle); }
 
+.main-header__link {
+  color: var(--font-color); }
+
 .burguer-button {
-  --cursor-button: none;
   --color-line-inner: #094293;
   --display-button: visibility; }
   @media screen and (min-width: 960px) {
     .burguer-button {
-      --display-button: none;
-      --cursor-button: pointer; } }
+      --display-button: none; } }
 
 .burguer-button {
   width: 2rem;
