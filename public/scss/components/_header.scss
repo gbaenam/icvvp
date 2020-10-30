@@ -4,12 +4,24 @@
     --width-logo: 3.6rem;
     --font-color: #094293;
     --font-size-title: 1.3rem;
+    --background-color: #fff;
     --font-size-subtitle: 1.1rem;
     --font-family: 'Amaranth', sans-serif;
 }
 
 .main-header {
-    // background-color: yellowgreen;
+
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: var(--z-fixed);
+    height: var(--height-header);
+    background-color: var(--background-color);
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
 
     &__logo {
         height: auto;

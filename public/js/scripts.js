@@ -19,7 +19,7 @@ console.log(helpBar)
 
 const changeIcons = () => {
     if (mql.matches) {
-        header.appendChild(nav)
+        // header.appendChild(nav)
         // header.appendChild(helpBar)
         // console.log(helpBar)
 

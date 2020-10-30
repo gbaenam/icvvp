@@ -89,17 +89,19 @@ ul {
 .main-layout {
   grid-row-gap: .3rem; }
 
-.main-header-layout {
-  --padding-main-header: 0 .8rem 0 .3rem; }
+.main-header__layout {
+  --padding-header: 0 .8rem 0 .3rem; }
   @media screen and (min-width: 960px) {
-    .main-header-layout {
-      --padding-main-header: 0 1rem 0 .5rem; } }
+    .main-header__layout {
+      --padding-header: 0 1rem 0 .5rem; } }
 
-.main-header-layout {
-  display: flex;
-  align-items: center;
-  height: var(--height-header);
-  padding: var(--padding-main-header); }
+.main-header__layout {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  padding: var(--padding-header); }
 
 .main-layout {
   padding: 3rem;
@@ -109,30 +111,36 @@ ul {
   --width-logo: 3.6rem;
   --font-color: #094293;
   --font-size-title: 1.3rem;
+  --background-color: #fff;
   --font-size-subtitle: 1.1rem;
   --font-family: 'Amaranth', sans-serif; }
 
-.main-header__logo {
-  height: auto;
-  margin-right: .3rem;
-  width: var(--width-logo); }
-
-.main-header__name-site {
-  margin-right: auto; }
-
-.main-header__title, .main-header__subtitle {
-  font-weight: 400;
-  font-family: var(--font-family); }
-
-.main-header__title {
-  font-size: var(--font-size-title); }
-
-.main-header__subtitle {
-  margin: 0;
-  font-size: var(--font-size-subtitle); }
-
-.main-header__link {
-  color: var(--font-color); }
+.main-header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: var(--z-fixed);
+  height: var(--height-header);
+  background-color: var(--background-color); }
+  .main-header__container {
+    display: flex;
+    align-items: center; }
+  .main-header__logo {
+    height: auto;
+    margin-right: .3rem;
+    width: var(--width-logo); }
+  .main-header__name-site {
+    margin-right: auto; }
+  .main-header__title, .main-header__subtitle {
+    font-weight: 400;
+    font-family: var(--font-family); }
+  .main-header__title {
+    font-size: var(--font-size-title); }
+  .main-header__subtitle {
+    margin: 0;
+    font-size: var(--font-size-subtitle); }
+  .main-header__link {
+    color: var(--font-color); }
 
 .burguer-button {
   --color-line-inner: #094293;
@@ -218,6 +226,7 @@ ul {
 
 .main-menu {
   text-align: left;
+  align-items: center;
   background-color: #9DBA2C;
   display: var(--display-menu); }
 
@@ -233,6 +242,9 @@ ul {
 
 .contact {
   margin-left: 1rem; }
+
+.main {
+  margin-top: var(--height-header); }
 
 [class*="section-"] {
   padding: .6rem;

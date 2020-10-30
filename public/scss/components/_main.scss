@@ -1,5 +1,9 @@
 // Contenido principal de la página.
 
+.main {
+    margin-top: var(--height-header);
+}
+
 [class*="section-"] {
     padding: .6rem;
     background-color: orange;
