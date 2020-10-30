@@ -13,6 +13,9 @@
 }
 
 .main-header-layout {
+    // max-width: 1270px;
+    // margin-left: auto;
+    // margin-right: auto;
     --padding-main-header: 0 .8rem 0 .3rem;
     @include from (xmedium) {
         --padding-main-header: 0 1rem 0 .5rem;

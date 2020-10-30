@@ -33,14 +33,6 @@
   --z-fixed: 100;
   --z-modal: 1000; }
 
-:root {
-  --width-icons: 3.2rem;
-  --padding-help-bar: .5rem 1rem; }
-  @media screen and (min-width: 960px) {
-    :root {
-      --padding-help-bar: 0;
-      --width-icons: 2.5rem; } }
-
 *,
 *::before,
 *::after {
@@ -185,11 +177,16 @@ ul {
   --width-nav: 80vw;
   --position-nav: fixed;
   --transition-nav: left .6s;
-  --height-nav: calc(100vh - var(--height-header));
   --flex-direction-nav: column;
+  --height-nav: calc(100vh - var(--height-header));
   /* ------ main-menu ------*/
   --display-menu: block;
-  /*------------------------*/ }
+  /*------------------------*/
+  /* ---------- help-bar ----------*/
+  --order-help-bar: -1;
+  --width-icons: 3.2rem;
+  --padding-help-bar: .5rem 1rem;
+  /*-------------------------------*/ }
   @media screen and (min-width: 960px) {
     .main-nav {
       --width-nav: auto;
@@ -199,7 +196,12 @@ ul {
       --flex-direction-nav: row;
       /* ------ main-menu ------*/
       --display-menu: flex;
-      /*------------------------*/ } }
+      /*------------------------*/
+      /* ------ help-bar ------*/
+      --order-help-bar: 0;
+      --padding-help-bar: 0;
+      --width-icons: 2.5rem;
+      /*-----------------------*/ } }
 
 .main-nav {
   left: -80vw;
@@ -207,21 +209,23 @@ ul {
   width: var(--width-nav);
   height: var(--height-nav);
   top: var(--height-header);
-  flex-direction: var(--flex-direction-nav);
   position: var(--position-nav);
   transition: var(--transition-nav);
-  background-color: lightseagreen; }
+  background-color: lightseagreen;
+  flex-direction: var(--flex-direction-nav); }
   .main-nav__move {
     left: 0; }
 
+.main-menu {
+  text-align: left;
+  background-color: #9DBA2C;
+  display: var(--display-menu); }
+
 .help-bar {
   display: flex;
-  padding: var(--padding-help-bar);
   justify-content: flex-end;
-  order: -1; }
-  @media screen and (min-width: 960px) {
-    .help-bar {
-      order: 1; } }
+  order: var(--order-help-bar);
+  padding: var(--padding-help-bar); }
 
 .checkin,
 .contact {
@@ -229,11 +233,6 @@ ul {
 
 .contact {
   margin-left: 1rem; }
-
-.main-menu {
-  text-align: left;
-  background-color: #9DBA2C;
-  display: var(--display-menu); }
 
 [class*="section-"] {
   padding: .6rem;
