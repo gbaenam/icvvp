@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1270px;
+  --max-width: 1200px;
   --min-width: 320px;
   --height-header: 4rem; }
   @media screen and (min-width: 1600px) {
@@ -94,6 +94,9 @@ ul {
   @media screen and (min-width: 960px) {
     .main-header__layout {
       --padding-header: 0 1rem 0 .5rem; } }
+  @media screen and (min-width: 1280px) {
+    .main-header__layout {
+      --padding-header: 0; } }
 
 .main-header__layout {
   height: 100%;
@@ -186,9 +189,11 @@ ul {
   --position-nav: fixed;
   --transition-nav: left .6s;
   --flex-direction-nav: column;
+  --background-color-nav: lightseagreen;
   --height-nav: calc(100vh - var(--height-header));
   /* ------ main-menu ------*/
   --display-menu: block;
+  --background-color-menu: #9DBA2C;
   /*------------------------*/
   /* ---------- help-bar ----------*/
   --order-help-bar: -1;
@@ -202,13 +207,19 @@ ul {
       --position-nav: static;
       --transition-nav: none;
       --flex-direction-nav: row;
+      --background-color-nav: none;
       /* ------ main-menu ------*/
       --display-menu: flex;
+      --background-color-menu: none;
+      --margin-right-menu: 2rem;
       /*------------------------*/
+      /*-------- main-menu__item ---------*/
+      --margin-right-item: 1rem;
+      /*----------------------------------*/
       /* ------ help-bar ------*/
+      --width-icons: 3rem;
       --order-help-bar: 0;
       --padding-help-bar: 0;
-      --width-icons: 2.5rem;
       /*-----------------------*/ } }
 
 .main-nav {
@@ -219,16 +230,21 @@ ul {
   top: var(--height-header);
   position: var(--position-nav);
   transition: var(--transition-nav);
-  background-color: lightseagreen;
-  flex-direction: var(--flex-direction-nav); }
+  flex-direction: var(--flex-direction-nav);
+  background-color: var(--background-color-nav); }
   .main-nav__move {
     left: 0; }
 
 .main-menu {
   text-align: left;
   align-items: center;
-  background-color: #9DBA2C;
-  display: var(--display-menu); }
+  display: var(--display-menu);
+  margin-right: var(--margin-right-menu);
+  background-color: var(--background-color-menu); }
+  .main-menu__item {
+    margin-right: var(--margin-right-item); }
+  .main-menu__item:last-child {
+    margin-right: 0; }
 
 .help-bar {
   display: flex;
@@ -238,10 +254,11 @@ ul {
 
 .checkin,
 .contact {
-  width: var(--width-icons); }
+  width: var(--width-icons);
+  cursor: var(--cursor-button); }
 
-.contact {
-  margin-left: 1rem; }
+.checkin {
+  margin-right: 1.5rem; }
 
 .main {
   margin-top: var(--height-header); }
