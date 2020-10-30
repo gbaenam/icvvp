@@ -1,17 +1,74 @@
-// Menú principal de navegación.
+
+// Variables locales.
+.main-nav {
+    --width-nav: 80vw;
+    --position-nav: fixed;
+    --transition-nav: left .6s;
+    --height-nav: calc(100vh - #{var(--height-header)});
+    --flex-direction-nav: column;
+
+
+
+    /* ------ main-menu ------*/
+    --display-menu: block;
+    /*------------------------*/
+
+    @include from(xmedium) {
+        --width-nav: auto;
+        --height-nav: auto;
+        --position-nav: static;
+        --transition-nav: none;
+        --flex-direction-nav: row;
+
+
+
+        /* ------ main-menu ------*/
+        --display-menu: flex;
+        /*------------------------*/
+    }
+}
 
 .main-nav {
-    width: 80vw;
-    color: white;
-    position: fixed;
     left: -80vw;
-    transition: left .6s;
+    display: flex;
+    width: var(--width-nav);
+    height: var(--height-nav);
     top: var(--height-header);
+    flex-direction: var(--flex-direction-nav);
+    position: var(--position-nav);
+    transition: var(--transition-nav);
     background-color: lightseagreen;
-    height: calc(100vh - #{var(--height-header)});
 
     &__move {
         left: 0;
     }
 }
+
+.help-bar {
+    display: flex;
+    padding: var(--padding-help-bar);
+    justify-content: flex-end;
+
+    order: -1;
+
+    @include from(xmedium) {
+        order: 1;
+    }
+}
+
+.checkin,
+.contact {
+    width: var(--width-icons);
+}
+
+.contact {
+    margin-left: 1rem;
+}
+
+.main-menu {
+    text-align: left;
+    background-color: #9DBA2C;
+    display: var(--display-menu);
+}
+
 

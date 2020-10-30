@@ -59,5 +59,16 @@ $breakpoints: (
     --z-modal: 1000;
 }
 
+// Variables para la barra de ayuda (help-bar)
+:root {
+    --width-icons: 3.2rem;
+    --padding-help-bar: .5rem 1rem;
+
+    @include from(xmedium) {
+        --padding-help-bar: 0;
+        --width-icons: 2.5rem;
+    }
+}
+
 
 
