@@ -261,7 +261,8 @@ ul {
   margin-right: 1.5rem; }
 
 .main {
-  margin-top: var(--height-header); }
+  margin-top: var(--height-header);
+  min-width: 320px; }
 
 [class*="section-"] {
   padding: .6rem;

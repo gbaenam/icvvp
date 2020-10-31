@@ -2,6 +2,9 @@
 
 .main {
     margin-top: var(--height-header);
+
+    min-width: 320px;
+
 }
 
 [class*="section-"] {
