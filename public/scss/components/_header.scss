@@ -3,14 +3,28 @@
 .main-header {
     --width-logo: 3.6rem;
     --font-color: #094293;
-    --font-size-title: 1.3rem;
+    --font-size-title: 1.2rem;
     --background-color: #fff;
-    --font-size-subtitle: 1.1rem;
+    --font-size-subtitle: 1rem;
     --font-family: 'Amaranth', sans-serif;
+
+    @include from(360px) {
+        --font-size-title: 1.3rem;
+        --font-size-subtitle: 1.1rem;
+    }
+
+    @include from(xmedium) {
+        z-index: var(--z-normal);
+    }
+
+    @include from(zlarge) {
+        --width-logo: 4rem;
+        --font-size-title: 1.5rem;
+        --font-size-subtitle: 1.2rem;
+    }
 }
 
 .main-header {
-
     top: 0;
     width: 100%;
     position: fixed;
