@@ -5,19 +5,25 @@
     --position-nav: fixed;
     --transition-nav: left .6s;
     --flex-direction-nav: column;
-    --background-color-nav: lightseagreen;
+    --background-color-nav: #2a3b47;
     --height-nav: calc(100vh - #{var(--height-header)});
 
-    /* ------ main-menu ------*/
+    /* ------------- main-menu ---------------*/
     --display-menu: block;
-    --background-color-menu: #9DBA2C;
-    /*------------------------*/
+    --border-top-menu: 1px solid #11191e;
+    --border-bottom-menu: 2px solid #485761;
+    /*----------------------------------------*/
 
-    /* ---------- help-bar ----------*/
+    /*----------- main-menu__item -----------*/
+    --border-top-item: 2px solid #485761;
+    --border-bottom-item: 1px solid #11191e;
+    /*---------------------------------------*/
+
+    /* ------------- help-bar ------------*/
     --order-help-bar: -1;
     --width-icons: 3.2rem;
-    --padding-help-bar: .5rem 1rem;
-    /*-------------------------------*/
+    --padding-help-bar: 1rem 1.5rem 1rem 0;
+    /*------------------------------------*/
 
 
     @include from(xmedium) {
@@ -30,12 +36,15 @@
 
         /* ------ main-menu ------*/
         --display-menu: flex;
-        --background-color-menu: none;
         --margin-right-menu: 2rem;
+        --border-top-menu: none;
+        --border-bottom-menu: none;
         /*------------------------*/
 
         /*-------- main-menu__item ---------*/
+        --border-top-item: none;
         --margin-right-item: 1rem;
+        --border-bottom-item: none;
         /*----------------------------------*/
 
         /* ------ help-bar ------*/
@@ -66,15 +75,37 @@
     text-align: left;
     align-items: center;
     display: var(--display-menu);
+    border-top: var(--border-top-menu);
     margin-right: var(--margin-right-menu);
-    background-color: var(--background-color-menu);
+    border-bottom: var(--border-bottom-menu);
 
     &__item {
+        border-top: var(--border-top-item);
         margin-right: var(--margin-right-item);
+        border-bottom: var(--border-bottom-item);
     }
 
     &__item:last-child {
         margin-right: 0;
+    }
+
+    &__item:hover {
+        border-top: none;
+        border-bottom: none;
+    }
+
+    &__link {
+        display: block;
+        padding: .8rem;
+        color: #aab0b5;
+        // font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        font-size: .9rem;
+        line-height: normal;
+    }
+
+    &__link:hover {
+        color: #fff;
     }
 }
 
@@ -83,6 +114,8 @@
     justify-content: flex-end;
     order: var(--order-help-bar);
     padding: var(--padding-help-bar);
+
+            // background-color: lightgray;
 }
 
 .checkin,
@@ -95,6 +128,3 @@
     margin-right: 1.5rem;
 }
 
-// .contact {
-//     margin-left: 1rem;
-// }

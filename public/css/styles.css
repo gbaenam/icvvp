@@ -201,17 +201,22 @@ ul {
   --position-nav: fixed;
   --transition-nav: left .6s;
   --flex-direction-nav: column;
-  --background-color-nav: lightseagreen;
+  --background-color-nav: #2a3b47;
   --height-nav: calc(100vh - var(--height-header));
-  /* ------ main-menu ------*/
+  /* ------------- main-menu ---------------*/
   --display-menu: block;
-  --background-color-menu: #9DBA2C;
-  /*------------------------*/
-  /* ---------- help-bar ----------*/
+  --border-top-menu: 1px solid #11191e;
+  --border-bottom-menu: 2px solid #485761;
+  /*----------------------------------------*/
+  /*----------- main-menu__item -----------*/
+  --border-top-item: 2px solid #485761;
+  --border-bottom-item: 1px solid #11191e;
+  /*---------------------------------------*/
+  /* ------------- help-bar ------------*/
   --order-help-bar: -1;
   --width-icons: 3.2rem;
-  --padding-help-bar: .5rem 1rem;
-  /*-------------------------------*/ }
+  --padding-help-bar: 1rem 1.5rem 1rem 0;
+  /*------------------------------------*/ }
   @media screen and (min-width: 960px) {
     .main-nav {
       --width-nav: auto;
@@ -222,11 +227,14 @@ ul {
       --background-color-nav: none;
       /* ------ main-menu ------*/
       --display-menu: flex;
-      --background-color-menu: none;
       --margin-right-menu: 2rem;
+      --border-top-menu: none;
+      --border-bottom-menu: none;
       /*------------------------*/
       /*-------- main-menu__item ---------*/
+      --border-top-item: none;
       --margin-right-item: 1rem;
+      --border-bottom-item: none;
       /*----------------------------------*/
       /* ------ help-bar ------*/
       --width-icons: 3rem;
@@ -251,12 +259,27 @@ ul {
   text-align: left;
   align-items: center;
   display: var(--display-menu);
+  border-top: var(--border-top-menu);
   margin-right: var(--margin-right-menu);
-  background-color: var(--background-color-menu); }
+  border-bottom: var(--border-bottom-menu); }
   .main-menu__item {
-    margin-right: var(--margin-right-item); }
+    border-top: var(--border-top-item);
+    margin-right: var(--margin-right-item);
+    border-bottom: var(--border-bottom-item); }
   .main-menu__item:last-child {
     margin-right: 0; }
+  .main-menu__item:hover {
+    border-top: none;
+    border-bottom: none; }
+  .main-menu__link {
+    display: block;
+    padding: .8rem;
+    color: #aab0b5;
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: normal; }
+  .main-menu__link:hover {
+    color: #fff; }
 
 .help-bar {
   display: flex;
