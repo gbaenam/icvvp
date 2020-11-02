@@ -214,8 +214,8 @@ ul {
   /*---------------------------------------*/
   /* ------------- help-bar ------------*/
   --order-help-bar: -1;
-  --width-icons: 3.2rem;
-  --padding-help-bar: 1rem 1.5rem 1rem 0;
+  --width-icons: 2.8rem;
+  --padding-help-bar: .8rem 1.5rem .8rem 0;
   /*------------------------------------*/ }
   @media screen and (min-width: 960px) {
     .main-nav {
