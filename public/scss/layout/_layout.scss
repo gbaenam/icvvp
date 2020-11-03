@@ -15,8 +15,12 @@
 .main-header__layout {
     --padding-header: 0 .8rem 0 .3rem;
 
-    @include from (xmedium) {
+    @include from(xmedium) {
         --padding-header: 0 1rem 0 .5rem;
+    }
+
+    @include from(large) {
+        --padding-header: 0 1.2rem 0 .7rem;
     }
 
     @include from(xlarge) {

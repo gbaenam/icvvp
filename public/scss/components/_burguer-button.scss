@@ -4,7 +4,7 @@
     --color-line-inner: #094293;
     --display-button: visibility;
 
-    @include from(xmedium) {
+    @include from(large) {
         --display-button: none;
     }
 }

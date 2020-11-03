@@ -3,7 +3,7 @@ const   header = document.getElementById('main-header'),
         burguerButton = document.querySelector('.burguer-button'),
         burguerLine = document.querySelector('.burguer-button__line'),
         nav = document.getElementById('main-nav'),
-        mql = matchMedia('(min-width: 960px)')
+        mql = matchMedia('(min-width: 1024px)')
 
 
 // Hamburger button animation

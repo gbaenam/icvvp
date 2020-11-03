@@ -1,12 +1,14 @@
 
 // Variables locales.
 .main-nav {
+    /* -------------------- main-nav ------------------- */
     --width-nav: 80vw;
     --position-nav: fixed;
     --transition-nav: left .6s;
     --flex-direction-nav: column;
     --background-color-nav: #2a3b47;
     --height-nav: calc(100vh - #{var(--height-header)});
+    /*---------------------------------------------------*/
 
     /* ------------- main-menu ---------------*/
     --display-menu: block;
@@ -19,20 +21,34 @@
     --border-bottom-item: 1px solid #11191e;
     /*---------------------------------------*/
 
+    /*---- main-menu__link ----*/
+    --padding-link: .8rem;
+    --font-size-link: .9rem;
+    --color-link: #aab0b5;
+    --font-weight-link: 400;
+    /*-------------------------*/
+
+    /*-- main-menu__link:hover --*/
+    --color-link-hover: #fff;
+    /*---------------------------*/
+
     /* ------------- help-bar ------------*/
     --order-help-bar: -1;
     --width-icons: 2.8rem;
-    --padding-help-bar: .8rem 1.5rem .8rem 0;
+    --margin-right-checkin-icon: 1rem;
+    --padding-help-bar: .8rem 1rem .8rem 0;
     /*------------------------------------*/
 
 
-    @include from(xmedium) {
+    @include from(large) {
+        /* ------- main-nav ------- */
         --width-nav: auto;
         --height-nav: auto;
         --position-nav: static;
         --transition-nav: none;
         --flex-direction-nav: row;
         --background-color-nav: none;
+        /*--------------------------*/
 
         /* ------ main-menu ------*/
         --display-menu: flex;
@@ -43,15 +59,33 @@
 
         /*-------- main-menu__item ---------*/
         --border-top-item: none;
-        --margin-right-item: 1rem;
+        --margin-right-item: 1.2rem;
         --border-bottom-item: none;
         /*----------------------------------*/
+
+        /*--------- main-menu__link ---------*/
+        --padding-link: 0;
+        --font-size-link: .98rem;
+        --font-weight-link: 600;
+        --color-link: hsl(215, 88%, 28%);
+        /*-----------------------------------*/
+
+        /*-- main-menu__link:hover --*/
+        --color-link-hover: #1192ee;
+        /*---------------------------*/
 
         /* ------ help-bar ------*/
         --width-icons: 3rem;
         --order-help-bar: 0;
         --padding-help-bar: 0;
+        --margin-right-checkin-icon: 1.5rem;
         /*-----------------------*/
+    }
+
+    @include from(xlarge) {
+        /*---- main-menu__link -----*/
+        --font-size-link: 1.1rem;
+        /*-------------------------*/
     }
 }
 
@@ -96,16 +130,15 @@
 
     &__link {
         display: block;
-        padding: .8rem;
-        color: #aab0b5;
-        // font-family: 'Oswald', sans-serif;
-        font-weight: 300;
-        font-size: .9rem;
         line-height: normal;
+        color: var(--color-link);
+        padding: var(--padding-link);
+        font-size: var(--font-size-link);
+        font-weight: var(--font-weight-link);
     }
 
     &__link:hover {
-        color: #fff;
+        color: var(--color-link-hover);
     }
 }
 
@@ -114,8 +147,6 @@
     justify-content: flex-end;
     order: var(--order-help-bar);
     padding: var(--padding-help-bar);
-
-            // background-color: lightgray;
 }
 
 .checkin,
@@ -125,6 +156,5 @@
 }
 
 .checkin {
-    margin-right: 1.5rem;
+    margin-right: var(--margin-right-checkin-icon);
 }
-

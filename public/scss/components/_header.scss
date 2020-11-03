@@ -9,18 +9,18 @@
     --font-family: 'Amaranth', sans-serif;
 
     @include from(360px) {
-        --font-size-title: 1.3rem;
-        --font-size-subtitle: 1.1rem;
+        --font-size-title: 1.26rem;
+        --font-size-subtitle: 1.06rem;
     }
 
-    @include from(xmedium) {
+    @include from(large) {
         z-index: var(--z-normal);
     }
 
     @include from(zlarge) {
         --width-logo: 4rem;
-        --font-size-title: 1.5rem;
-        --font-size-subtitle: 1.2rem;
+        --font-size-title: 1.35rem;
+        --font-size-subtitle: 1.15rem;
     }
 }
 
@@ -30,6 +30,7 @@
     position: fixed;
     z-index: var(--z-fixed);
     height: var(--height-header);
+    border-bottom: 1px solid lightgray;
     background-color: var(--background-color);
 
     &__container {
@@ -67,7 +68,4 @@
         color: var(--font-color);
     }
 }
-
-
-
 
