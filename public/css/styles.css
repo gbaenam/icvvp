@@ -22,7 +22,7 @@
 
 :root {
   --cursor-button: default; }
-  @media screen and (min-width: 960px) {
+  @media screen and (min-width: 1024px) {
     :root {
       --cursor-button: pointer; } }
 
@@ -147,7 +147,8 @@ ul {
   .main-header__logo {
     height: auto;
     margin-right: .3rem;
-    width: var(--width-logo); }
+    width: var(--width-logo);
+    cursor: var(--cursor-button); }
   .main-header__name-site {
     margin-right: auto; }
   .main-header__title, .main-header__subtitle {
@@ -159,7 +160,8 @@ ul {
     margin: 0;
     font-size: var(--font-size-subtitle); }
   .main-header__link {
-    color: var(--font-color); }
+    color: var(--font-color);
+    cursor: var(--cursor-button); }
 
 .burguer-button {
   --color-line-inner: #094293;

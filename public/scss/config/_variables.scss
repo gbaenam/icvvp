@@ -45,7 +45,7 @@ $breakpoints: (
 :root {
     --cursor-button: default;
 
-    @include from(xmedium) {
+    @include from(large) {
         --cursor-button: pointer;
     }
 }
