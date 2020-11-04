@@ -314,6 +314,8 @@ ul {
     padding: var(--padding-link);
     font-size: var(--font-size-link);
     font-weight: var(--font-weight-link); }
+  .main-menu__link:focus {
+    color: red; }
   .main-menu__link:hover {
     color: var(--color-link-hover); }
 

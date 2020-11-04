@@ -138,6 +138,10 @@
         font-weight: var(--font-weight-link);
     }
 
+    &__link:focus {
+        color: red;
+    }
+
     &__link:hover {
         color: var(--color-link-hover);
     }
