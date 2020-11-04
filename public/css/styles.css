@@ -280,6 +280,7 @@ ul {
 .main-nav {
   left: -80vw;
   display: flex;
+  overflow-y: auto;
   width: var(--width-nav);
   height: var(--height-nav);
   top: var(--height-header);
