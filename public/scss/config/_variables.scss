@@ -16,7 +16,7 @@ $breakpoints: (
 :root {
     --max-width: 1200px;
     --min-width: 320px;
-    --height-header: 4rem;
+    --height-header: 5rem;
     @include from(zlarge) {
         --height-header: 4.5rem;
     }
