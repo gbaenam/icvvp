@@ -1,10 +1,10 @@
 :root {
   --max-width: 1200px;
   --min-width: 320px;
-  --height-header: 5rem; }
-  @media screen and (min-width: 1600px) {
+  --height-header: 4rem; }
+  @media screen and (min-width: 1024px) {
     :root {
-      --height-header: 4.5rem; } }
+      --height-header: 5rem; } }
 
 :root {
   --font-family-h: 'News Cycle', sans-serif;

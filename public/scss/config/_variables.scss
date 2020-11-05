@@ -16,10 +16,15 @@ $breakpoints: (
 :root {
     --max-width: 1200px;
     --min-width: 320px;
-    --height-header: 5rem;
-    @include from(zlarge) {
-        --height-header: 4.5rem;
+    --height-header: 4rem;
+
+    @include from(large) {
+        --height-header: 5rem;
     }
+
+    // @include from(zlarge) {
+    //     --height-header: 4.5rem;
+    // }
 }
 
 // Familia de fuentes.
