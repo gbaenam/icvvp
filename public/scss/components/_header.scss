@@ -65,7 +65,8 @@
         font-size: var(--font-size-subtitle);
     }
 
-    &__link {
+    &__link-title,
+    &__link-subtitle {
         color: var(--font-color);
         cursor: var(--cursor-button);
     }

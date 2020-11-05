@@ -159,7 +159,7 @@ ul {
   .main-header__subtitle {
     margin: 0;
     font-size: var(--font-size-subtitle); }
-  .main-header__link {
+  .main-header__link-title, .main-header__link-subtitle {
     color: var(--font-color);
     cursor: var(--cursor-button); }
 
