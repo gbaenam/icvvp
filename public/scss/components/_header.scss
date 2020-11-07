@@ -38,11 +38,39 @@
         align-items: center;
     }
 
+    &__link-logo {
+        @include from(large) {
+            margin-right: 5px;
+            position: relative;
+            border-radius: 10px;
+            border: 2px solid transparent;
+
+            &:focus {
+                border-color: rgba(252, 211, 7, 1);
+            }
+
+            &:hover {
+                border-color: transparent;
+                background-color:  rgba(28, 90, 148, .09);
+            }
+
+            &:active {
+                top: 1px;
+                left: 1px;
+                background-color:  rgba(28, 90, 148, .12);
+            }
+        }
+    }
+
     &__logo {
         height: auto;
         margin-right: .3rem;
         width: var(--width-logo);
         cursor: var(--cursor-button);
+
+        @include from(large) {
+            margin-right: 0;
+        }
     }
 
     // Contenedor Title y Subtitle

@@ -4,7 +4,7 @@
   --height-header: 4rem; }
   @media screen and (min-width: 1024px) {
     :root {
-      --height-header: 5rem; } }
+      --height-header: 4.5rem; } }
 
 :root {
   --font-family-h: 'News Cycle', sans-serif;
@@ -144,11 +144,29 @@ ul {
   .main-header__container {
     display: flex;
     align-items: center; }
+  @media screen and (min-width: 1024px) {
+    .main-header__link-logo {
+      margin-right: 5px;
+      position: relative;
+      border-radius: 10px;
+      border: 2px solid transparent; }
+      .main-header__link-logo:focus {
+        border-color: #fcd307; }
+      .main-header__link-logo:hover {
+        border-color: transparent;
+        background-color: rgba(28, 90, 148, 0.09); }
+      .main-header__link-logo:active {
+        top: 1px;
+        left: 1px;
+        background-color: rgba(28, 90, 148, 0.12); } }
   .main-header__logo {
     height: auto;
     margin-right: .3rem;
     width: var(--width-logo);
     cursor: var(--cursor-button); }
+    @media screen and (min-width: 1024px) {
+      .main-header__logo {
+        margin-right: 0; } }
   .main-header__name-site {
     margin-right: auto; }
   .main-header__title, .main-header__subtitle {
