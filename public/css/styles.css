@@ -167,17 +167,12 @@ ul {
     @media screen and (min-width: 1024px) {
       .main-header__logo {
         margin-right: 0; } }
-  .main-header__name-site {
-    margin-right: auto; }
-  .main-header__title, .main-header__subtitle {
-    font-weight: 400;
-    font-family: var(--font-family); }
   .main-header__title {
-    font-size: var(--font-size-title); }
-  .main-header__subtitle {
-    margin: 0;
-    font-size: var(--font-size-subtitle); }
-  .main-header__link-title, .main-header__link-subtitle {
+    font-weight: 400;
+    font-family: var(--font-family);
+    font-size: var(--font-size-title);
+    margin-right: auto; }
+  .main-header__link-title {
     color: var(--font-color);
     cursor: var(--cursor-button); }
 

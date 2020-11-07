@@ -73,30 +73,17 @@
         }
     }
 
-    // Contenedor Title y Subtitle
-    &__name-site {
+    &__title {
+        font-weight: 400;
+        font-family: var(--font-family);
+        font-size: var(--font-size-title);
         margin-right: auto;
     }
 
-    &__title,
-    &__subtitle {
-        font-weight: 400;
-        font-family: var(--font-family);
-    }
-
-    &__title {
-        font-size: var(--font-size-title);
-    }
-
-    &__subtitle {
-        margin: 0;
-        font-size: var(--font-size-subtitle);
-    }
-
-    &__link-title,
-    &__link-subtitle {
+    &__link-title {
         color: var(--font-color);
         cursor: var(--cursor-button);
     }
+
 }
 
