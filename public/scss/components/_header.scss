@@ -1,26 +1,24 @@
 
 // Variables locales
 .main-header {
-    --width-logo: 3.6rem;
+    --width-logo: 3.1rem;
     --font-color: #094293;
-    --font-size-title: 1.2rem;
+    --font-size-title: 1.1rem;
     --background-color: #fff;
-    --font-size-subtitle: 1rem;
-    --font-family: 'Amaranth', sans-serif;
+    --font-family: 'Cinzel', serif;
 
     @include from(360px) {
         --font-size-title: 1.26rem;
-        --font-size-subtitle: 1.06rem;
     }
 
     @include from(large) {
+        --width-logo: 3.5rem;
         z-index: var(--z-normal);
     }
 
     @include from(zlarge) {
-        --width-logo: 4rem;
-        --font-size-title: 1.35rem;
-        --font-size-subtitle: 1.15rem;
+        // --width-logo: 4rem;
+        --font-size-title: 1.8rem;
     }
 }
 
@@ -38,9 +36,8 @@
         align-items: center;
     }
 
-    &__link-logo {
+    &__logo-link {
         @include from(large) {
-            margin-right: 5px;
             position: relative;
             border-radius: 10px;
             border: 2px solid transparent;
@@ -64,26 +61,21 @@
 
     &__logo {
         height: auto;
-        margin-right: .3rem;
         width: var(--width-logo);
         cursor: var(--cursor-button);
-
-        @include from(large) {
-            margin-right: 0;
-        }
     }
 
     &__title {
-        font-weight: 400;
+        font-weight: 600;
         font-family: var(--font-family);
         font-size: var(--font-size-title);
         margin-right: auto;
+        padding: 4px;
     }
 
-    &__link-title {
+    &__title-link {
         color: var(--font-color);
         cursor: var(--cursor-button);
     }
-
 }
 

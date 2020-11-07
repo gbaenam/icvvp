@@ -1,10 +1,10 @@
 :root {
   --max-width: 1200px;
   --min-width: 320px;
-  --height-header: 4rem; }
+  --height-header: 3.5rem; }
   @media screen and (min-width: 1024px) {
     :root {
-      --height-header: 4.5rem; } }
+      --height-header: 4.2rem; } }
 
 :root {
   --font-family-h: 'News Cycle', sans-serif;
@@ -114,24 +114,21 @@ ul {
   background-color: lightpink; }
 
 .main-header {
-  --width-logo: 3.6rem;
+  --width-logo: 3.1rem;
   --font-color: #094293;
-  --font-size-title: 1.2rem;
+  --font-size-title: 1.1rem;
   --background-color: #fff;
-  --font-size-subtitle: 1rem;
-  --font-family: 'Amaranth', sans-serif; }
+  --font-family: 'Cinzel', serif; }
   @media screen and (min-width: 360px) {
     .main-header {
-      --font-size-title: 1.26rem;
-      --font-size-subtitle: 1.06rem; } }
+      --font-size-title: 1.26rem; } }
   @media screen and (min-width: 1024px) {
     .main-header {
+      --width-logo: 3.5rem;
       z-index: var(--z-normal); } }
   @media screen and (min-width: 1600px) {
     .main-header {
-      --width-logo: 4rem;
-      --font-size-title: 1.35rem;
-      --font-size-subtitle: 1.15rem; } }
+      --font-size-title: 1.8rem; } }
 
 .main-header {
   top: 0;
@@ -145,34 +142,30 @@ ul {
     display: flex;
     align-items: center; }
   @media screen and (min-width: 1024px) {
-    .main-header__link-logo {
-      margin-right: 5px;
+    .main-header__logo-link {
       position: relative;
       border-radius: 10px;
       border: 2px solid transparent; }
-      .main-header__link-logo:focus {
+      .main-header__logo-link:focus {
         border-color: #fcd307; }
-      .main-header__link-logo:hover {
+      .main-header__logo-link:hover {
         border-color: transparent;
         background-color: rgba(28, 90, 148, 0.09); }
-      .main-header__link-logo:active {
+      .main-header__logo-link:active {
         top: 1px;
         left: 1px;
         background-color: rgba(28, 90, 148, 0.12); } }
   .main-header__logo {
     height: auto;
-    margin-right: .3rem;
     width: var(--width-logo);
     cursor: var(--cursor-button); }
-    @media screen and (min-width: 1024px) {
-      .main-header__logo {
-        margin-right: 0; } }
   .main-header__title {
-    font-weight: 400;
+    font-weight: 600;
     font-family: var(--font-family);
     font-size: var(--font-size-title);
-    margin-right: auto; }
-  .main-header__link-title {
+    margin-right: auto;
+    padding: 4px; }
+  .main-header__title-link {
     color: var(--font-color);
     cursor: var(--cursor-button); }
 
@@ -266,7 +259,7 @@ ul {
       /*------------------------*/
       /*-------- main-menu__item ---------*/
       --border-top-item: none;
-      --margin-right-item: 1.2rem;
+      --margin-right-item: 1rem;
       --border-bottom-item: none;
       /*----------------------------------*/
       /*--------- main-menu__link ---------*/
