@@ -330,14 +330,11 @@ ul {
   justify-content: flex-end;
   order: var(--order-help-bar);
   padding: var(--padding-help-bar); }
-
-.checkin,
-.contact {
-  width: var(--width-icons);
-  cursor: var(--cursor-button); }
-
-.checkin {
-  margin-right: var(--margin-right-checkin-icon); }
+  .help-bar__icon-checkin, .help-bar__icon-contact {
+    width: var(--width-icons);
+    cursor: var(--cursor-button); }
+  .help-bar__icon-checkin {
+    margin-right: var(--margin-right-checkin-icon); }
 
 .main {
   margin-top: var(--height-header);

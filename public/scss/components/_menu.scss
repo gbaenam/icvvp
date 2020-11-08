@@ -153,14 +153,14 @@
     justify-content: flex-end;
     order: var(--order-help-bar);
     padding: var(--padding-help-bar);
-}
 
-.checkin,
-.contact {
-    width: var(--width-icons);
-    cursor: var(--cursor-button);
-}
+    &__icon-checkin,
+    &__icon-contact {
+        width: var(--width-icons);
+        cursor: var(--cursor-button);
+    }
 
-.checkin {
-    margin-right: var(--margin-right-checkin-icon);
+    &__icon-checkin {
+        margin-right: var(--margin-right-checkin-icon);
+    }
 }
