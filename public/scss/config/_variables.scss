@@ -4,6 +4,7 @@ $breakpoints: (
     medium: 640px,
     xmedium: 960px,
     large: 1024px,
+    llarge: 1160px,
     xlarge: 1280px,
     xxlarge: 1440px,
     zlarge: 1600px,
@@ -18,13 +19,20 @@ $breakpoints: (
     --min-width: 320px;
     --height-header: 3.5rem;
 
-    @include from(large) {
-        --height-header: 4.2rem;
+    // Wide 540px
+    @include from(540px) {
+        --height-header: 3.8rem;
     }
 
-    // @include from(zlarge) {
-    //     --height-header: 4.5rem;
-    // }
+    // Wide 640px
+    @include from(medium) {
+        --height-header: 4rem;
+    }
+
+    // Wide 1024px
+    @include from(large) {
+        --height-header: 5rem;
+    }
 }
 
 // Familia de fuentes.
