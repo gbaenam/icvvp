@@ -77,24 +77,19 @@
         --font-weight-link: 300;
         --padding-link: .5em .3em;
         --font-size-link: 1.1875em;
-        --border-radius-link: .25em;
         --font-family-link: 'Oswald', sans-serif;
-        --border-link: .10526em solid transparent;
         /*-----------------------------------*/
 
         /*----- main-menu__link-hover ------*/
         --color-link-hover: #2e969f;
         /*----------------------------------*/
 
-        /*------------- main-menu__link-focus ---------------*/
-        --border-color-link-focus:  rgba(67, 203, 161, 1);
-        /*---------------------------------------------------*/
-
         /* ----------- help-bar -----------*/
         --width-icons: 3rem;
         --order-help-bar: 0;
         --padding-help-bar: 0;
         --margin-right-button-checkin: 1.5rem;
+        --padding-button-help-bar: .1875rem;
         /*---------------------------------*/
     }
 
@@ -190,7 +185,7 @@
     }
 
     &__link:active {
-        border-color: transparent;
+        border-color: var(--border-color-link-active);
     }
 }
 
@@ -200,6 +195,21 @@
     justify-content: flex-end;
     order: var(--order-help-bar);
     padding: var(--padding-help-bar);
+
+    &__button {
+
+        border: var(--border-link);
+        padding: var(--padding-button-help-bar);
+        border-radius: var(--border-radius-link);
+
+        &:focus {
+            border-color: var(--border-color-link-focus);
+        }
+
+        &:active {
+            border-color: var(--border-color-link-active);
+        }
+    }
 
     &__button:first-child {
         margin-right: var(--margin-right-button-checkin);

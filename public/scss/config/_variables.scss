@@ -72,4 +72,16 @@ $breakpoints: (
     --z-modal: 1000;
 }
 
+// Variables para los enlaces en general.
+// logo-link, title-link, main-menu__link, help-bar__button
+:root {
+
+    @include from(large) {
+        --border-radius-link: .3125rem;
+        --border-color-link-active: transparent;
+        --border-link: .125rem solid transparent;
+        --border-color-link-focus: rgba(67, 203, 161, 1);
+    }
+}
+
 

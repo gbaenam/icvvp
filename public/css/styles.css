@@ -39,6 +39,13 @@
   --z-fixed: 100;
   --z-modal: 1000; }
 
+@media screen and (min-width: 1024px) {
+  :root {
+    --border-radius-link: .3125rem;
+    --border-color-link-active: transparent;
+    --border-link: .125rem solid transparent;
+    --border-color-link-focus: rgba(67, 203, 161, 1); } }
+
 *,
 *::before,
 *::after {
@@ -152,12 +159,6 @@ ul {
       /*------- logo-link -------*/
       --margin-right-logo-link: 0;
       /*-------------------------*/
-      /*------------ logo-link y title-link -------------*/
-      --border-radius-link: .3125rem;
-      --border-color-link-active: transparent;
-      --border-link: .125rem solid transparent;
-      --border-color-link-focus: rgba(67, 203, 161, 1);
-      /*-------------------------------------------------*/
       /*------- logo -------*/
       --width-logo: 3.7rem;
       /*--------------------*/
@@ -316,21 +317,17 @@ ul {
       --font-weight-link: 300;
       --padding-link: .5em .3em;
       --font-size-link: 1.1875em;
-      --border-radius-link: .25em;
       --font-family-link: 'Oswald', sans-serif;
-      --border-link: .10526em solid transparent;
       /*-----------------------------------*/
       /*----- main-menu__link-hover ------*/
       --color-link-hover: #2e969f;
       /*----------------------------------*/
-      /*------------- main-menu__link-focus ---------------*/
-      --border-color-link-focus:  rgba(67, 203, 161, 1);
-      /*---------------------------------------------------*/
       /* ----------- help-bar -----------*/
       --width-icons: 3rem;
       --order-help-bar: 0;
       --padding-help-bar: 0;
       --margin-right-button-checkin: 1.5rem;
+      --padding-button-help-bar: .1875rem;
       /*---------------------------------*/ } }
   @media screen and (min-width: 1100px) {
     .main-nav {
@@ -397,13 +394,21 @@ ul {
   .main-menu__link:hover {
     color: var(--color-link-hover); }
   .main-menu__link:active {
-    border-color: transparent; }
+    border-color: var(--border-color-link-active); }
 
 .help-bar {
   display: flex;
   justify-content: flex-end;
   order: var(--order-help-bar);
   padding: var(--padding-help-bar); }
+  .help-bar__button {
+    border: var(--border-link);
+    padding: var(--padding-button-help-bar);
+    border-radius: var(--border-radius-link); }
+    .help-bar__button:focus {
+      border-color: var(--border-color-link-focus); }
+    .help-bar__button:active {
+      border-color: var(--border-color-link-active); }
   .help-bar__button:first-child {
     margin-right: var(--margin-right-button-checkin); }
   .help-bar__icon-checkin, .help-bar__icon-contact {
