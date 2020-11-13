@@ -86,6 +86,7 @@
 
     // Wide 1600px
     @include from(zlarge) {
+        --width-logo: 4rem;
         --font-size-title: 1.5rem;
     }
 }

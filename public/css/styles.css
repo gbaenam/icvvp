@@ -172,6 +172,7 @@ ul {
       /*-----------------------------------*/ } }
   @media screen and (min-width: 1600px) {
     .main-header {
+      --width-logo: 4rem;
       --font-size-title: 1.5rem; } }
 
 .main-header {
