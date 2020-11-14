@@ -189,8 +189,8 @@
     }
 }
 
-.main-menu {
-    &__link:hover {
+.main-menu__link {
+    &:hover {
         color: var(--color-link-hover);
     }
 }
