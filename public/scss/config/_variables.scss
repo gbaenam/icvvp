@@ -11,7 +11,18 @@ $breakpoints: (
     zzlarge: 1920px
 );
 
+
 // VARIABLES GLOBALES.
+
+// Variables de apilamiento - "z-index"
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
 
 // Anchos y alturas.
 :root {
@@ -54,34 +65,23 @@ $breakpoints: (
     }
 }
 
-// Variables para button
 :root {
+    // Variables para button
     --cursor-button: default;
 
     @include from(large) {
+        // Variables para button
         --cursor-button: pointer;
-    }
-}
 
-// Variables de apilamiento - "z-index"
-:root {
-    --z-back: -10;
-    --z-normal: 1;
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
-}
-
-// Variables para los enlaces en general.
-// logo-link, title-link, main-menu__link, help-bar__button
-:root {
-
-    @include from(large) {
+        // Variables para los enlaces en general.
+        // logo-link, title-link, main-menu__link, help-bar__button
         --border-radius-link: .3125rem;
         --border-color-link-active: transparent;
         --border-link: .125rem solid transparent;
         --border-color-link-focus: rgba(67, 203, 161, 1);
     }
 }
+
+
 
 

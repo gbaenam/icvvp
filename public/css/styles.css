@@ -1,4 +1,11 @@
 :root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000; }
+
+:root {
   --max-width: 1200px;
   --min-width: 320px;
   --height-header: 3.5rem; }
@@ -30,21 +37,11 @@
   --cursor-button: default; }
   @media screen and (min-width: 1024px) {
     :root {
-      --cursor-button: pointer; } }
-
-:root {
-  --z-back: -10;
-  --z-normal: 1;
-  --z-tooltip: 10;
-  --z-fixed: 100;
-  --z-modal: 1000; }
-
-@media screen and (min-width: 1024px) {
-  :root {
-    --border-radius-link: .3125rem;
-    --border-color-link-active: transparent;
-    --border-link: .125rem solid transparent;
-    --border-color-link-focus: rgba(67, 203, 161, 1); } }
+      --cursor-button: pointer;
+      --border-radius-link: .3125rem;
+      --border-color-link-active: transparent;
+      --border-link: .125rem solid transparent;
+      --border-color-link-focus: rgba(67, 203, 161, 1); } }
 
 *,
 *::before,
