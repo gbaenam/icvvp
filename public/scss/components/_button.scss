@@ -1,0 +1,17 @@
+.button {
+    color: #fff;
+    padding: .5em 0;
+    position: relative;
+    border-radius: 2em;
+    text-transform: uppercase;
+    background-color: #20cf0f;
+    font-family: 'Oswald', sans-serif;
+    border: .144230769em solid transparent;
+    // transition: color .5s, background .5s, border .5s;
+}
+
+.button-generic {
+    font-size: var(--font-size-button);
+    min-width: var(--min-width-button);
+}
+

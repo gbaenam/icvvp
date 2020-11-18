@@ -21,7 +21,8 @@
 
 :root {
   --font-family-h: 'News Cycle', sans-serif;
-  --font-family-body: 'Open Sans', sans-serif; }
+  --font-family-body: 'Open Sans', sans-serif;
+  --font-family-italic: 'Noto Serif', serif; }
 
 :root {
   --font-size-h1: 2rem;
@@ -37,11 +38,18 @@
   --cursor-button: default; }
   @media screen and (min-width: 1024px) {
     :root {
-      --cursor-button: pointer;
-      --border-radius-link: .3125rem;
-      --border-color-link-active: transparent;
-      --border-link: .125rem solid transparent;
-      --border-color-link-focus: rgba(67, 203, 161, 1); } }
+      --cursor-button: pointer; } }
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --border-radius-link: .3125rem;
+    --border-color-link-active: transparent;
+    --border-link: .125rem solid transparent;
+    --border-color-link-focus: rgba(67, 203, 161, 1); } }
+
+:root {
+  --font-size-button: 1.2em;
+  --min-width-button: 16rem; }
 
 *,
 *::before,
@@ -73,7 +81,7 @@ button {
   padding: 0;
   border: none;
   outline: none;
-  background: none;
+  background: transparent;
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
@@ -88,6 +96,18 @@ ul {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none; }
+
+q,
+cite {
+  display: inline;
+  font-weight: 400;
+  font-family: var(--font-family-italic); }
+
+q:before {
+  content: open-quote; }
+
+q:after {
+  content: close-quote; }
 
 .container {
   text-align: center; }
@@ -119,9 +139,39 @@ ul {
   max-width: var(--max-width);
   padding: var(--padding-header); }
 
+.main-banner__layout {
+  --padding-banner: 2rem 1rem 3rem;
+  --polygon-banner: 0 0, 100% 0, 100% 100%, 0 98%; }
+  @media screen and (min-width: 960px) {
+    .main-banner__layout {
+      --polygon-banner: 0 0, 100% 0, 100% 100%, 0 94%; } }
+  @media screen and (min-width: 1024px) {
+    .main-banner__layout {
+      --padding-banner: 2.5rem 2rem 4rem; } }
+
+.main-banner__layout {
+  min-width: var(--min-width);
+  padding: var(--padding-banner);
+  margin-top: var(--height-header);
+  clip-path: polygon(var(--polygon-banner)); }
+
 .main-layout {
   padding: 3rem;
   background-color: lightpink; }
+
+.button {
+  color: #fff;
+  padding: .5em 0;
+  position: relative;
+  border-radius: 2em;
+  text-transform: uppercase;
+  background-color: #20cf0f;
+  font-family: 'Oswald', sans-serif;
+  border: .144230769em solid transparent; }
+
+.button-generic {
+  font-size: var(--font-size-button);
+  min-width: var(--min-width-button); }
 
 .main-header {
   /*-------------- header -------------*/
@@ -412,8 +462,64 @@ ul {
     width: var(--width-icons);
     cursor: var(--cursor-button); }
 
+.main-banner {
+  --object-position: top left; }
+  @media screen and (min-width: 1024px) {
+    .main-banner {
+      --object-position: top right; } }
+  @media screen and (min-width: 1440px) {
+    .main-banner {
+      --object-position: center; } }
+
+.main-banner {
+  font-size: 1rem; }
+
+.main-banner {
+  position: relative;
+  background-color: #626262; }
+  .main-banner__hero-image {
+    top: 0;
+    left: 0;
+    opacity: .2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    object-position: var(--object-position); }
+  .main-banner__content {
+    display: flex;
+    color: white;
+    position: relative;
+    align-items: center;
+    flex-direction: column; }
+  .main-banner__button-sello-promesa {
+    margin-bottom: 1.2rem;
+    position: relative; }
+    @media screen and (min-width: 1024px) {
+      .main-banner__button-sello-promesa {
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 10px; } }
+    .main-banner__button-sello-promesa:focus {
+      border-color: var(--border-color-link-focus); }
+    .main-banner__button-sello-promesa:active {
+      border-color: var(--border-color-link-active);
+      top: .0625rem; }
+    @media screen and (min-width: 1024px) {
+      .main-banner__button-sello-promesa:hover {
+        background-color: rgba(0, 0, 0, 0.2); } }
+  .main-banner__logo-sello-promesa {
+    height: 8rem; }
+    @media screen and (min-width: 1024px) {
+      .main-banner__logo-sello-promesa {
+        height: 10rem; } }
+  .main-banner__title {
+    font-size: 1.5rem;
+    margin: 0 1rem; }
+  .main-banner__subtitle {
+    margin: .9rem 0 2rem; }
+
 .main {
-  margin-top: var(--height-header);
   min-width: 320px; }
 
 [class*="section-"] {

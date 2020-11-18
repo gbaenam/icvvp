@@ -50,6 +50,7 @@ $breakpoints: (
 :root {
     --font-family-h: 'News Cycle', sans-serif;
     --font-family-body: 'Open Sans', sans-serif;
+    --font-family-italic: 'Noto Serif', serif;
 }
 
 // Tamaños de fuentes.
@@ -65,16 +66,18 @@ $breakpoints: (
     }
 }
 
+// Variables para cursor.
 :root {
-    // Variables para button
     --cursor-button: default;
 
     @include from(large) {
-        // Variables para button
         --cursor-button: pointer;
+    }
+}
 
-        // Variables para los enlaces en general.
-        // logo-link, title-link, main-menu__link, help-bar__button
+// Variables para los enlaces.
+:root {
+    @include from(large) {
         --border-radius-link: .3125rem;
         --border-color-link-active: transparent;
         --border-link: .125rem solid transparent;
@@ -82,6 +85,9 @@ $breakpoints: (
     }
 }
 
-
-
+// Variables para button
+:root {
+    --font-size-button: 1.2em;
+    --min-width-button: 16rem;
+}
 

@@ -37,6 +37,26 @@
     padding: var(--padding-header);
 }
 
+.main-banner__layout {
+    --padding-banner: 2rem 1rem 3rem;
+    --polygon-banner: 0 0, 100% 0, 100% 100%, 0 98%;
+
+    @include from(xmedium) {
+        --polygon-banner: 0 0, 100% 0, 100% 100%, 0 94%;
+    }
+
+    @include from(large) {
+        --padding-banner: 2.5rem 2rem 4rem;
+    }
+}
+
+.main-banner__layout {
+    min-width: var(--min-width);
+    padding: var(--padding-banner);
+    margin-top: var(--height-header);
+    clip-path: polygon(var(--polygon-banner));
+}
+
 .main-layout {
     padding: 3rem;
     background-color: lightpink;

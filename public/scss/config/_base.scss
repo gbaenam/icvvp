@@ -41,7 +41,7 @@ button {
     padding: 0;
     border: none;
     outline: none;
-    background: none;
+    background: transparent;
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
@@ -64,6 +64,22 @@ ul {
     list-style: none;
 }
 
+// Etiqueta q y cite
+q,
+cite {
+    display: inline;
+    font-weight: 400;
+    font-family: var(--font-family-italic);
+}
 
+q {
+    &:before {
+        content: open-quote;
+    }
+
+    &:after {
+        content: close-quote;
+    }
+}
 
 
