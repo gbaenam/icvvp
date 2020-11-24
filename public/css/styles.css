@@ -485,10 +485,18 @@ q:after {
     cursor: var(--cursor-button); }
 
 .main-banner {
-  --object-position: top left; }
+  --object-position: top left;
+  --margin-bottom-sello-promesa: 1.2rem; }
+  @media screen and (min-width: 640px) {
+    .main-banner {
+      --margin-bottom-sello-promesa: 1.5rem; } }
+  @media screen and (min-width: 960px) {
+    .main-banner {
+      --margin-bottom-sello-promesa: 1.8rem; } }
   @media screen and (min-width: 1024px) {
     .main-banner {
-      --object-position: top right; } }
+      --object-position: top right;
+      --padding-button-sello-promesa: .3125rem; } }
   @media screen and (min-width: 1440px) {
     .main-banner {
       --object-position: center; } }
@@ -515,27 +523,18 @@ q:after {
     align-items: center;
     flex-direction: column; }
   .main-banner__button-sello-promesa {
-    margin-bottom: 1.2rem;
-    position: relative; }
-    @media screen and (min-width: 640px) {
-      .main-banner__button-sello-promesa {
-        margin-bottom: 1.5rem; } }
-    @media screen and (min-width: 960px) {
-      .main-banner__button-sello-promesa {
-        margin-bottom: 1.8rem; } }
-    @media screen and (min-width: 1024px) {
-      .main-banner__button-sello-promesa {
-        padding: 5px;
-        border: 1px solid transparent;
-        border-radius: 10px; } }
+    position: relative;
+    border: var(--border-link);
+    padding: var(--padding-button-sello-promesa);
+    margin-bottom: var(--margin-bottom-sello-promesa);
+    border-radius: .625rem; }
     .main-banner__button-sello-promesa:focus {
       border-color: var(--border-color-link-focus); }
     .main-banner__button-sello-promesa:active {
-      border-color: var(--border-color-link-active);
-      top: .0625rem; }
-    @media screen and (min-width: 1024px) {
-      .main-banner__button-sello-promesa:hover {
-        background-color: rgba(0, 0, 0, 0.2); } }
+      top: .0625rem;
+      border-color: var(--border-color-link-active); }
+    .main-banner__button-sello-promesa:hover {
+      background-color: rgba(0, 0, 0, 0.2); }
   .main-banner__logo-sello-promesa {
     height: 8rem; }
     @media screen and (min-width: 640px) {

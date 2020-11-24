@@ -79,6 +79,7 @@ $breakpoints: (
 :root {
     @include from(large) {
         --border-radius-link: .3125rem;
+        // --border-radius-link-big: .625rem;
         --border-color-link-active: transparent;
         --border-link: .125rem solid transparent;
         --border-color-link-focus: rgba(67, 203, 161, 1);

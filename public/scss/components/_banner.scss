@@ -2,8 +2,20 @@
 .main-banner {
     --object-position: top left;
 
+    --margin-bottom-sello-promesa: 1.2rem;
+
+    @include from(medium) {
+        --margin-bottom-sello-promesa: 1.5rem;
+    }
+
+    @include from(xmedium) {
+        --margin-bottom-sello-promesa: 1.8rem;
+    }
+
     @include from(large) {
         --object-position: top right;
+
+        --padding-button-sello-promesa: .3125rem;
     }
 
     @include from(xxlarge) {
@@ -39,37 +51,28 @@
     }
 
     &__button-sello-promesa {
-        margin-bottom: 1.2rem;
         position: relative;
+        border: var(--border-link);
+        padding: var(--padding-button-sello-promesa);
+        // border-radius: var(--border-radius-link-big);
+        margin-bottom: var(--margin-bottom-sello-promesa);
 
-        @include from(medium) {
-            margin-bottom: 1.5rem;
-        }
+        border-radius: .625rem;
 
-        @include from(xmedium) {
-            margin-bottom: 1.8rem;
-        }
-
-        @include from(large) {
-            padding: 5px;
-            border: 1px solid transparent;
-            border-radius: 10px;
-        }
 
         &:focus {
             border-color: var(--border-color-link-focus);
         }
 
         &:active {
-            border-color: var(--border-color-link-active);
             top: .0625rem;
-            // left: .0625rem;
+            border-color: var(--border-color-link-active);
         }
 
         &:hover {
-            @include from(large) {
-                background-color: rgba(0, 0, 0, .2);
-            }
+            background-color: rgba(0, 0, 0, .2);
+            // @include from(large) {
+            // }
         }
     }
 
