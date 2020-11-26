@@ -43,6 +43,7 @@
 @media screen and (min-width: 1024px) {
   :root {
     --border-radius-link: .3125rem;
+    --border-radius-link-big: .625rem;
     --border-color-link-active: transparent;
     --border-link: .125rem solid transparent;
     --border-color-link-focus: rgba(67, 203, 161, 1); } }
@@ -486,20 +487,41 @@ q:after {
 
 .main-banner {
   --object-position: top left;
-  --margin-bottom-sello-promesa: 1.2rem; }
+  --margin-bottom-sello-promesa: 1.2rem;
+  --height-sello-promesa: 8rem;
+  --font-size-title: 1.5rem;
+  --margin-title: 0 1rem; }
   @media screen and (min-width: 640px) {
     .main-banner {
-      --margin-bottom-sello-promesa: 1.5rem; } }
+      --margin-bottom-sello-promesa: 1.5rem;
+      --height-sello-promesa: 8.5rem;
+      --font-size-title: 1.6rem; } }
   @media screen and (min-width: 960px) {
     .main-banner {
-      --margin-bottom-sello-promesa: 1.8rem; } }
+      --margin-bottom-sello-promesa: 1.8rem;
+      --height-sello-promesa: 9rem;
+      --font-size-title: 1.8rem; } }
   @media screen and (min-width: 1024px) {
     .main-banner {
       --object-position: top right;
-      --padding-button-sello-promesa: .3125rem; } }
+      --padding-button-sello-promesa: .3125rem;
+      --background-color-sello-promesa-hover: rgba(0, 0, 0, .2);
+      --height-sello-promesa: 9.5rem; } }
+  @media screen and (min-width: 1280px) {
+    .main-banner {
+      --height-sello-promesa: 11rem;
+      --font-size-title: 2.2rem; } }
   @media screen and (min-width: 1440px) {
     .main-banner {
-      --object-position: center; } }
+      --object-position: center;
+      --margin-title: 0 5rem; } }
+  @media screen and (min-width: 1600px) {
+    .main-banner {
+      --font-size-title: 2.4rem; } }
+  @media screen and (min-width: 1920px) {
+    .main-banner {
+      --height-sello-promesa: 12rem;
+      --margin-title: 0 9rem; } }
 
 .main-banner {
   font-size: 1rem; }
@@ -526,53 +548,20 @@ q:after {
     position: relative;
     border: var(--border-link);
     padding: var(--padding-button-sello-promesa);
-    margin-bottom: var(--margin-bottom-sello-promesa);
-    border-radius: .625rem; }
+    border-radius: var(--border-radius-link-big);
+    margin-bottom: var(--margin-bottom-sello-promesa); }
     .main-banner__button-sello-promesa:focus {
       border-color: var(--border-color-link-focus); }
     .main-banner__button-sello-promesa:active {
       top: .0625rem;
       border-color: var(--border-color-link-active); }
     .main-banner__button-sello-promesa:hover {
-      background-color: rgba(0, 0, 0, 0.2); }
+      background-color: var(--background-color-sello-promesa-hover); }
   .main-banner__logo-sello-promesa {
-    height: 8rem; }
-    @media screen and (min-width: 640px) {
-      .main-banner__logo-sello-promesa {
-        height: 8.5rem; } }
-    @media screen and (min-width: 960px) {
-      .main-banner__logo-sello-promesa {
-        height: 9rem; } }
-    @media screen and (min-width: 1024px) {
-      .main-banner__logo-sello-promesa {
-        height: 9.5rem; } }
-    @media screen and (min-width: 1280px) {
-      .main-banner__logo-sello-promesa {
-        height: 11rem; } }
-    @media screen and (min-width: 1920px) {
-      .main-banner__logo-sello-promesa {
-        height: 12rem; } }
+    height: var(--height-sello-promesa); }
   .main-banner__title {
-    font-size: 1.5rem;
-    margin: 0 1rem; }
-    @media screen and (min-width: 640px) {
-      .main-banner__title {
-        font-size: 1.6rem; } }
-    @media screen and (min-width: 960px) {
-      .main-banner__title {
-        font-size: 1.8rem; } }
-    @media screen and (min-width: 1280px) {
-      .main-banner__title {
-        font-size: 2.2rem; } }
-    @media screen and (min-width: 1440px) {
-      .main-banner__title {
-        margin: 0 5rem; } }
-    @media screen and (min-width: 1600px) {
-      .main-banner__title {
-        font-size: 2.4rem; } }
-    @media screen and (min-width: 1920px) {
-      .main-banner__title {
-        margin: 0 9rem; } }
+    margin: var(--margin-title);
+    font-size: var(--font-size-title); }
   .main-banner__subtitle {
     margin: .9rem 0 2rem; }
     @media screen and (min-width: 640px) {

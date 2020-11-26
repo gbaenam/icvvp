@@ -4,22 +4,56 @@
 
     --margin-bottom-sello-promesa: 1.2rem;
 
+    --height-sello-promesa: 8rem;
+
+    --font-size-title: 1.5rem;
+    --margin-title: 0 1rem;
+
     @include from(medium) {
         --margin-bottom-sello-promesa: 1.5rem;
+        --height-sello-promesa: 8.5rem;
+
+        --font-size-title: 1.6rem;
     }
 
     @include from(xmedium) {
         --margin-bottom-sello-promesa: 1.8rem;
+        --height-sello-promesa: 9rem;
+
+        --font-size-title: 1.8rem;
+
     }
 
     @include from(large) {
         --object-position: top right;
 
         --padding-button-sello-promesa: .3125rem;
+
+        --background-color-sello-promesa-hover: rgba(0, 0, 0, .2);
+
+        --height-sello-promesa: 9.5rem;
+    }
+
+    @include from(xlarge) {
+        --height-sello-promesa: 11rem;
+
+        --font-size-title: 2.2rem;
     }
 
     @include from(xxlarge) {
         --object-position: center;
+
+        --margin-title: 0 5rem;
+    }
+
+    @include from(zlarge) {
+        --font-size-title: 2.4rem;
+    }
+
+    @include from(zzlarge) {
+        --height-sello-promesa: 12rem;
+
+        --margin-title: 0 9rem;
     }
 }
 
@@ -54,10 +88,8 @@
         position: relative;
         border: var(--border-link);
         padding: var(--padding-button-sello-promesa);
-        // border-radius: var(--border-radius-link-big);
+        border-radius: var(--border-radius-link-big);
         margin-bottom: var(--margin-bottom-sello-promesa);
-
-        border-radius: .625rem;
 
 
         &:focus {
@@ -70,63 +102,17 @@
         }
 
         &:hover {
-            background-color: rgba(0, 0, 0, .2);
-            // @include from(large) {
-            // }
+            background-color: var(--background-color-sello-promesa-hover);
         }
     }
 
     &__logo-sello-promesa {
-        height: 8rem;
-
-        @include from(medium) {
-            height: 8.5rem;
-        }
-
-        @include from(xmedium) {
-            height: 9rem;
-        }
-
-        @include from(large) {
-            height: 9.5rem;
-        }
-
-        @include from(xlarge) {
-            height: 11rem;
-        }
-
-        @include from(zzlarge) {
-            height: 12rem;
-        }
+        height: var(--height-sello-promesa);
     }
 
     &__title {
-        font-size: 1.5rem;
-        margin: 0 1rem;
-
-        @include from(medium) {
-            font-size: 1.6rem;
-        }
-
-        @include from(xmedium) {
-            font-size: 1.8rem;
-        }
-
-        @include from(xlarge) {
-            font-size: 2.2rem;
-        }
-
-        @include from(xxlarge) {
-            margin: 0 5rem;
-        }
-
-        @include from(zlarge) {
-            font-size: 2.4rem;
-        }
-
-        @include from(zzlarge) {
-            margin: 0 9rem;
-        }
+        margin: var(--margin-title);
+        font-size: var(--font-size-title);
     }
 
     &__subtitle {
