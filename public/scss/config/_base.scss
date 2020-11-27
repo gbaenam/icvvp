@@ -32,12 +32,12 @@ h1 {
 
 // Reset <a>
 a {
-    outline: none;
     text-decoration: none;
 }
 
 a,
 button {
+    outline: none;
     cursor: var(--cursor-button);
 }
 
@@ -45,7 +45,6 @@ button {
 button {
     padding: 0;
     border: none;
-    outline: none;
     background: transparent;
     font-size: inherit;
     font-family: inherit;
