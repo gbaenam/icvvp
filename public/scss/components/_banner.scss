@@ -1,63 +1,145 @@
 
 .main-banner {
+
+    /*-------- hero-image -----------*/
     --object-position: top left;
+    /*-------------------------------*/
 
+    /*-------- button-sello ---------*/
     --margin-bottom-sello: 1.2rem;
+    /*-------------------------------*/
 
+    /*------ logo-sello ------*/
     --height-sello: 8rem;
+    /*------------------------*/
 
-    --font-size-title: 1.5rem;
+    /*--------- title ----------*/
     --margin-title: 0 1rem;
+    --font-size-title: 1.5rem;
+    /*--------------------------*/
 
+    /*---------- subtitle -----------*/
+    --margin-subtitle: .9rem 0 2rem;
+    /*-------------------------------*/
+
+
+    // Wide 640px
     @include from(medium) {
+
+        /*-------- button-sello ---------*/
         --margin-bottom-sello: 1.5rem;
+        /*-------------------------------*/
+
+        /*------ logo-sello ------*/
         --height-sello: 8.5rem;
+        /*------------------------*/
 
+        /*--------- title ----------*/
         --font-size-title: 1.6rem;
+        /*--------------------------*/
+
+        /*----------- subtitle ------------*/
+        --font-size-subtitle: 1.1rem;
+        --margin-subtitle: .9rem 0 2.5rem;
+        /*---------------------------------*/
     }
 
+
+    // Wide 960px
     @include from(xmedium) {
+
+        /*-------- button-sello ---------*/
         --margin-bottom-sello: 1.8rem;
+        /*-------------------------------*/
+
+        /*------ logo-sello ------*/
         --height-sello: 9rem;
+        /*------------------------*/
 
+        /*--------- title ----------*/
         --font-size-title: 1.8rem;
-
+        /*--------------------------*/
     }
 
+
+    // Wide 1024px
     @include from(large) {
+
+        /*-------- hero-image -----------*/
         --object-position: top right;
+        /*-------------------------------*/
 
+        /*------------------- button-sello ------------------*/
         --padding-button-sello: .3125rem;
-
         --background-color-sello-hover: rgba(0, 0, 0, .2);
+        /*---------------------------------------------------*/
 
+        /*------ logo-sello ------*/
         --height-sello: 9.5rem;
+        /*------------------------*/
+
+        /*----------- subtitle ------------*/
+        --font-size-subtitle: 1.2rem;
+        --margin-subtitle: .9rem 0 3rem;
+        /*---------------------------------*/
     }
 
+
+    // Wide 1280px
     @include from(xlarge) {
+
+        /*------ logo-sello ------*/
         --height-sello: 11rem;
+        /*------------------------*/
 
+        /*--------- title ----------*/
         --font-size-title: 2.2rem;
+        /*--------------------------*/
     }
 
+
+    // Wide 1440px
     @include from(xxlarge) {
+
+        /*-------- hero-image -----------*/
         --object-position: center;
+        /*-------------------------------*/
 
+        /*--------- title ----------*/
         --margin-title: 0 5rem;
+        /*--------------------------*/
     }
 
+
+    // Wide 1600px
     @include from(zlarge) {
+
+        /*--------- title ----------*/
         --font-size-title: 2.4rem;
+        /*--------------------------*/
     }
 
-    @include from(zzlarge) {
-        --height-sello: 12rem;
 
+    // Wide 1920px
+    @include from(zzlarge) {
+
+        /*------ logo-sello ------*/
+        --height-sello: 12rem;
+        /*------------------------*/
+
+        /*--------- title ----------*/
         --margin-title: 0 9rem;
+        /*--------------------------*/
+
+        /*----------- subtitle ------------*/
+        --margin-subtitle: .9rem 0 4.5rem;
+        /*---------------------------------*/
     }
 }
 
 .main-banner {
+    // Referencia para las unidades em
+    // del botón "La Promesa"
     font-size: 1rem;
 }
 
@@ -88,8 +170,8 @@
         position: relative;
         border: var(--border-link);
         padding: var(--padding-button-sello);
-        border-radius: var(--border-radius-link-big);
         margin-bottom: var(--margin-bottom-sello);
+        border-radius: var(--border-radius-link-big);
 
 
         &:focus {
@@ -116,21 +198,8 @@
     }
 
     &__subtitle {
-        margin: .9rem 0 2rem;
-
-        @include from(medium) {
-            margin: .9rem 0 2.5rem;
-            font-size: 1.1rem;
-        }
-
-        @include from(large) {
-            margin: .9rem 0 3rem;
-            font-size: 1.2rem;
-        }
-
-        @include from(zzlarge) {
-            margin: .9rem 0 4.5rem;
-        }
+        margin: var(--margin-subtitle);
+        font-size: var(--font-size-subtitle);
     }
 }
 

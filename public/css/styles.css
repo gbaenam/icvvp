@@ -488,42 +488,96 @@ q:after {
     cursor: var(--cursor-button); }
 
 .main-banner {
+  /*-------- hero-image -----------*/
   --object-position: top left;
+  /*-------------------------------*/
+  /*-------- button-sello ---------*/
   --margin-bottom-sello: 1.2rem;
+  /*-------------------------------*/
+  /*------ logo-sello ------*/
   --height-sello: 8rem;
+  /*------------------------*/
+  /*--------- title ----------*/
+  --margin-title: 0 1rem;
   --font-size-title: 1.5rem;
-  --margin-title: 0 1rem; }
+  /*--------------------------*/
+  /*---------- subtitle -----------*/
+  --margin-subtitle: .9rem 0 2rem;
+  /*-------------------------------*/ }
   @media screen and (min-width: 640px) {
     .main-banner {
+      /*-------- button-sello ---------*/
       --margin-bottom-sello: 1.5rem;
+      /*-------------------------------*/
+      /*------ logo-sello ------*/
       --height-sello: 8.5rem;
-      --font-size-title: 1.6rem; } }
+      /*------------------------*/
+      /*--------- title ----------*/
+      --font-size-title: 1.6rem;
+      /*--------------------------*/
+      /*----------- subtitle ------------*/
+      --font-size-subtitle: 1.1rem;
+      --margin-subtitle: .9rem 0 2.5rem;
+      /*---------------------------------*/ } }
   @media screen and (min-width: 960px) {
     .main-banner {
+      /*-------- button-sello ---------*/
       --margin-bottom-sello: 1.8rem;
+      /*-------------------------------*/
+      /*------ logo-sello ------*/
       --height-sello: 9rem;
-      --font-size-title: 1.8rem; } }
+      /*------------------------*/
+      /*--------- title ----------*/
+      --font-size-title: 1.8rem;
+      /*--------------------------*/ } }
   @media screen and (min-width: 1024px) {
     .main-banner {
+      /*-------- hero-image -----------*/
       --object-position: top right;
+      /*-------------------------------*/
+      /*------------------- button-sello ------------------*/
       --padding-button-sello: .3125rem;
       --background-color-sello-hover: rgba(0, 0, 0, .2);
-      --height-sello: 9.5rem; } }
+      /*---------------------------------------------------*/
+      /*------ logo-sello ------*/
+      --height-sello: 9.5rem;
+      /*------------------------*/
+      /*----------- subtitle ------------*/
+      --font-size-subtitle: 1.2rem;
+      --margin-subtitle: .9rem 0 3rem;
+      /*---------------------------------*/ } }
   @media screen and (min-width: 1280px) {
     .main-banner {
+      /*------ logo-sello ------*/
       --height-sello: 11rem;
-      --font-size-title: 2.2rem; } }
+      /*------------------------*/
+      /*--------- title ----------*/
+      --font-size-title: 2.2rem;
+      /*--------------------------*/ } }
   @media screen and (min-width: 1440px) {
     .main-banner {
+      /*-------- hero-image -----------*/
       --object-position: center;
-      --margin-title: 0 5rem; } }
+      /*-------------------------------*/
+      /*--------- title ----------*/
+      --margin-title: 0 5rem;
+      /*--------------------------*/ } }
   @media screen and (min-width: 1600px) {
     .main-banner {
-      --font-size-title: 2.4rem; } }
+      /*--------- title ----------*/
+      --font-size-title: 2.4rem;
+      /*--------------------------*/ } }
   @media screen and (min-width: 1920px) {
     .main-banner {
+      /*------ logo-sello ------*/
       --height-sello: 12rem;
-      --margin-title: 0 9rem; } }
+      /*------------------------*/
+      /*--------- title ----------*/
+      --margin-title: 0 9rem;
+      /*--------------------------*/
+      /*----------- subtitle ------------*/
+      --margin-subtitle: .9rem 0 4.5rem;
+      /*---------------------------------*/ } }
 
 .main-banner {
   font-size: 1rem; }
@@ -550,8 +604,8 @@ q:after {
     position: relative;
     border: var(--border-link);
     padding: var(--padding-button-sello);
-    border-radius: var(--border-radius-link-big);
-    margin-bottom: var(--margin-bottom-sello); }
+    margin-bottom: var(--margin-bottom-sello);
+    border-radius: var(--border-radius-link-big); }
     .main-banner__button-sello:focus {
       border-color: var(--border-color-link-focus); }
     .main-banner__button-sello:active {
@@ -565,18 +619,8 @@ q:after {
     margin: var(--margin-title);
     font-size: var(--font-size-title); }
   .main-banner__subtitle {
-    margin: .9rem 0 2rem; }
-    @media screen and (min-width: 640px) {
-      .main-banner__subtitle {
-        margin: .9rem 0 2.5rem;
-        font-size: 1.1rem; } }
-    @media screen and (min-width: 1024px) {
-      .main-banner__subtitle {
-        margin: .9rem 0 3rem;
-        font-size: 1.2rem; } }
-    @media screen and (min-width: 1920px) {
-      .main-banner__subtitle {
-        margin: .9rem 0 4.5rem; } }
+    margin: var(--margin-subtitle);
+    font-size: var(--font-size-subtitle); }
 
 .main {
   min-width: 320px; }
