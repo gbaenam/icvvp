@@ -12,12 +12,6 @@ body {
     // display: none;
 }
 
-// Reset <a>
-a {
-    outline: none;
-    text-decoration: none;
-}
-
 // Reset <img>
 img {
     max-width: 100%;
@@ -36,6 +30,17 @@ h1 {
     font-size: var(--font-size-h1);
 }
 
+// Reset <a>
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+a,
+button {
+    cursor: var(--cursor-button);
+}
+
 // Reset <button>
 button {
     padding: 0;
@@ -45,7 +50,6 @@ button {
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
-    cursor: var(--cursor-button);
 
     &:focus {
         outline: none;
