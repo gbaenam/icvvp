@@ -273,15 +273,13 @@ q:after {
       border-color: var(--border-color-link-active); }
   .main-header__logo {
     height: auto;
-    width: var(--width-logo);
-    cursor: var(--cursor-button); }
+    width: var(--width-logo); }
   .main-header__title {
     font-weight: 600;
     margin-right: auto;
     font-size: var(--font-size-title);
     font-family: var(--font-family-title); }
   .main-header__title-link {
-    cursor: var(--cursor-button);
     color: var(--color-title-link);
     padding: var(--padding-title-link); }
     .main-header__title-link:hover {
