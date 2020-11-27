@@ -119,17 +119,17 @@
         margin: .9rem 0 2rem;
 
         @include from(medium) {
-            margin-bottom: 2.5rem;
+            margin: .9rem 0 2.5rem;
             font-size: 1.1rem;
         }
 
         @include from(large) {
-            margin-bottom: 3rem;
+            margin: .9rem 0 3rem;
             font-size: 1.2rem;
         }
 
         @include from(zzlarge) {
-            margin-bottom: 4.5rem;
+            margin: .9rem 0 4.5rem;
         }
     }
 }
