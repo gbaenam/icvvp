@@ -2,23 +2,23 @@
 .main-banner {
     --object-position: top left;
 
-    --margin-bottom-sello-promesa: 1.2rem;
+    --margin-bottom-sello: 1.2rem;
 
-    --height-sello-promesa: 8rem;
+    --height-sello: 8rem;
 
     --font-size-title: 1.5rem;
     --margin-title: 0 1rem;
 
     @include from(medium) {
-        --margin-bottom-sello-promesa: 1.5rem;
-        --height-sello-promesa: 8.5rem;
+        --margin-bottom-sello: 1.5rem;
+        --height-sello: 8.5rem;
 
         --font-size-title: 1.6rem;
     }
 
     @include from(xmedium) {
-        --margin-bottom-sello-promesa: 1.8rem;
-        --height-sello-promesa: 9rem;
+        --margin-bottom-sello: 1.8rem;
+        --height-sello: 9rem;
 
         --font-size-title: 1.8rem;
 
@@ -27,15 +27,15 @@
     @include from(large) {
         --object-position: top right;
 
-        --padding-button-sello-promesa: .3125rem;
+        --padding-button-sello: .3125rem;
 
-        --background-color-sello-promesa-hover: rgba(0, 0, 0, .2);
+        --background-color-sello-hover: rgba(0, 0, 0, .2);
 
-        --height-sello-promesa: 9.5rem;
+        --height-sello: 9.5rem;
     }
 
     @include from(xlarge) {
-        --height-sello-promesa: 11rem;
+        --height-sello: 11rem;
 
         --font-size-title: 2.2rem;
     }
@@ -51,7 +51,7 @@
     }
 
     @include from(zzlarge) {
-        --height-sello-promesa: 12rem;
+        --height-sello: 12rem;
 
         --margin-title: 0 9rem;
     }
@@ -87,9 +87,9 @@
     &__button-sello {
         position: relative;
         border: var(--border-link);
-        padding: var(--padding-button-sello-promesa);
+        padding: var(--padding-button-sello);
         border-radius: var(--border-radius-link-big);
-        margin-bottom: var(--margin-bottom-sello-promesa);
+        margin-bottom: var(--margin-bottom-sello);
 
 
         &:focus {
@@ -102,12 +102,12 @@
         }
 
         &:hover {
-            background-color: var(--background-color-sello-promesa-hover);
+            background-color: var(--background-color-sello-hover);
         }
     }
 
     &__logo-sello {
-        height: var(--height-sello-promesa);
+        height: var(--height-sello);
     }
 
     &__title {
