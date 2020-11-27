@@ -84,7 +84,7 @@
         flex-direction: column;
     }
 
-    &__button-sello-promesa {
+    &__button-sello {
         position: relative;
         border: var(--border-link);
         padding: var(--padding-button-sello-promesa);
@@ -106,7 +106,7 @@
         }
     }
 
-    &__logo-sello-promesa {
+    &__logo-sello {
         height: var(--height-sello-promesa);
     }
 
