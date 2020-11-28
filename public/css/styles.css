@@ -303,8 +303,7 @@ q:after {
     height: .25rem;
     position: absolute;
     border-radius: 1.25rem;
-    background-color: var(--color-line-inner);
-    transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.45s; }
+    background-color: var(--color-line-inner); }
   .burguer-button__line {
     top: 50%;
     transform: translateY(-50%); }
