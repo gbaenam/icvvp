@@ -25,9 +25,12 @@
   --font-family-italic: 'Noto Serif', serif; }
 
 :root {
-  --font-size-h1: 2rem;
+  --font-size-h1: 1.8rem;
   --font-size-body: .9rem;
   --font-size-small: .75rem; }
+  @media screen and (min-width: 360px) {
+    :root {
+      --font-size-h1: 2rem; } }
   @media screen and (min-width: 960px) {
     :root {
       --font-size-h1: 2.5rem;
