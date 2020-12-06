@@ -634,6 +634,12 @@ q:after {
     font-size: 1.5rem;
     text-transform: uppercase;
     margin-bottom: .3rem; }
+    @media screen and (min-width: 360px) {
+      .youtube__title {
+        font-size: 1.65rem; } }
+    @media screen and (min-width: 412px) {
+      .youtube__title {
+        font-size: 1.85rem; } }
   .youtube__subtitle {
     margin: 0 0 1rem; }
   .youtube__video {
