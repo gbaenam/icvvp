@@ -8,9 +8,9 @@
     display: grid;
 }
 
-.main-layout {
-    grid-row-gap: .3rem;
-}
+// .main-layout {
+
+// }
 
 .main-header__layout {
     --padding-header: 0 .8rem 0 .3rem;
@@ -28,12 +28,16 @@
     }
 }
 
-.main-header__layout {
-    height: 100%;
+.main-header__layout,
+.main__layout {
     margin-left: auto;
     margin-right: auto;
     min-width: var(--min-width);
     max-width: var(--max-width);
+}
+
+.main-header__layout {
+    height: 100%;
     padding: var(--padding-header);
 }
 
@@ -61,8 +65,10 @@
     clip-path: polygon(var(--polygon-banner));
 }
 
-.main-layout {
-    padding: 3rem;
-    background-color: lightpink;
+.main__layout {
+    // grid-row-gap: .3rem;
+    padding: 1rem 0 2rem;
+    // background-color: lightpink;
 }
+
 
