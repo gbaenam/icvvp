@@ -184,7 +184,7 @@ q:after {
   clip-path: polygon(var(--polygon-banner)); }
 
 .main__layout {
-  padding: 1rem 0 2rem; }
+  padding: 2.5rem 0 2rem; }
 
 .button {
   color: #fff;
