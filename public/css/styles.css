@@ -619,7 +619,8 @@ q:after {
     font-size: var(--font-size-title); }
   .main-banner__subtitle {
     margin: var(--margin-subtitle);
-    font-size: var(--font-size-subtitle); }
+    font-size: var(--font-size-subtitle);
+    white-space: nowrap; }
 
 .main {
   color: #808080; }
