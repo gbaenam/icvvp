@@ -201,5 +201,9 @@
         margin: var(--margin-subtitle);
         font-size: var(--font-size-subtitle);
     }
+
+    &__subtitle cite {
+        display: block;
+    }
 }
 

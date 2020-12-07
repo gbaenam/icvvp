@@ -620,6 +620,8 @@ q:after {
   .main-banner__subtitle {
     margin: var(--margin-subtitle);
     font-size: var(--font-size-subtitle); }
+  .main-banner__subtitle cite {
+    display: block; }
 
 .main {
   color: #808080; }
