@@ -6,6 +6,7 @@ $youtube: true;
     color: #808080;
 }
 
+// Canal de Youtube
 @if $youtube {
     .youtube {
         width: 100%;
@@ -15,17 +16,22 @@ $youtube: true;
         min-width: 320px;
 
         &__title {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             text-transform: uppercase;
             margin-bottom: .3rem;
+            font-weight: 300;
 
             @include from(360px) {
-                font-size: 1.65rem;
+                font-size: 2.5rem;
             }
 
             @include from(412px) {
-                font-size: 1.85rem;
+                font-size: 2.7rem;
             }
+
+            // @include from(large) {
+            //     font-size: 2.8125rem;
+            // }
         }
 
         &__subtitle {
