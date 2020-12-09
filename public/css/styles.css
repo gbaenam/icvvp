@@ -135,7 +135,7 @@ q:after {
   text-align: center; }
 
 .container,
-.main-layout {
+.main__layout {
   display: grid; }
 
 .main-header__layout {
@@ -181,6 +181,7 @@ q:after {
   clip-path: polygon(var(--polygon-banner)); }
 
 .main__layout {
+  grid-row-gap: 2rem;
   padding: 2rem 0; }
 
 .button {
@@ -191,11 +192,20 @@ q:after {
   text-transform: uppercase;
   background-color: #20cf0f;
   font-family: 'Oswald', sans-serif;
-  border: .144230769em solid transparent; }
+  border: .144230769em solid transparent;
+  display: inline-block;
+  text-align: center; }
 
 .button-generic {
   font-size: var(--font-size-button);
   min-width: var(--min-width-button); }
+
+.line-break::before {
+  display: block;
+  content: ""; }
+  @media screen and (min-width: 640px) {
+    .line-break::before {
+      display: inline; } }
 
 .main-header {
   /*-------------- header -------------*/
@@ -620,7 +630,8 @@ q:after {
     white-space: nowrap; }
 
 .main {
-  color: #808080; }
+  color: #808080;
+  font-size: 1rem; }
 
 .youtube {
   width: 100%;
@@ -640,12 +651,13 @@ q:after {
       .youtube__title {
         font-size: 2.7rem; } }
   .youtube__subtitle {
-    margin: 0 0 1rem; }
+    margin: 0 0 1.5rem; }
   .youtube__video {
     display: grid;
     position: relative;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(9, 1fr); }
+    grid-template-rows: repeat(9, 1fr);
+    margin-bottom: 1.5rem; }
     .youtube__video::before {
       content: "";
       display: block;
@@ -654,6 +666,17 @@ q:after {
       position: absolute;
       width: 100%;
       height: 100%; }
+  .youtube__info {
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    flex-direction: column; }
+  .youtube__text {
+    text-align: left;
+    margin: 0 0 2rem; }
+    @media screen and (min-width: 640px) {
+      .youtube__text {
+        margin: 0 0 2.5rem; } }
 
 .aside {
   padding: 1rem;
