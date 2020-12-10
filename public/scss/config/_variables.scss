@@ -112,12 +112,7 @@ $breakpoints: (
 
     @include from(xlarge) {
         --font-size-button: 1.6em;
-        --min-width-button: 24rem;
-    }
-
-    @include from(zzlarge) {
-        --font-size-button: 1.8em;
-        --min-width-button: 25rem;
+        --min-width-button: 22rem;
     }
 }
 

@@ -68,11 +68,7 @@
   @media screen and (min-width: 1280px) {
     :root {
       --font-size-button: 1.6em;
-      --min-width-button: 24rem; } }
-  @media screen and (min-width: 1920px) {
-    :root {
-      --font-size-button: 1.8em;
-      --min-width-button: 25rem; } }
+      --min-width-button: 22rem; } }
 
 *,
 *::before,
@@ -637,8 +633,10 @@ q:after {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: 960px;
-  min-width: 320px; }
+  max-width: 960px; }
+  @media screen and (min-width: 960px) {
+    .youtube {
+      width: 75%; } }
   .youtube__title {
     font-size: 2.2rem;
     text-transform: uppercase;
@@ -686,7 +684,8 @@ q:after {
     @media screen and (min-width: 1280px) {
       .youtube__info {
         padding: 0;
-        flex-direction: row; } }
+        flex-direction: row;
+        align-items: center; } }
   .youtube__text {
     text-align: left;
     margin: 0 0 2rem; }
