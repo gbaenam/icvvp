@@ -39,6 +39,10 @@ $youtube: true;
             @include ratio(16,9);
             margin-bottom: 1.5rem;
 
+            @include from(xlarge) {
+                margin-bottom: 2.5rem;
+            }
+
             > iframe, video {
                 position: absolute;
                 width: 100%;
@@ -51,6 +55,23 @@ $youtube: true;
             padding: 0 1rem;
             align-items: center;
             flex-direction: column;
+
+            @include from(360px) {
+                padding: 0 1.5rem;
+            }
+
+            @include from(412px) {
+                padding: 0 2rem;
+            }
+
+            @include from(medium) {
+                padding: 0 3rem;
+            }
+
+            @include from(xlarge) {
+                padding: 0;
+                flex-direction: row;
+            }
         }
 
         &__text {
@@ -59,6 +80,11 @@ $youtube: true;
 
             @include from(medium) {
                 margin: 0 0 2.5rem;
+            }
+
+            @include from(xlarge) {
+                margin: 0;
+                padding: 0 3rem 0 0;
             }
         }
     }
