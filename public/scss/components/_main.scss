@@ -78,7 +78,6 @@ $youtube: true;
             @include from(xlarge) {
                 padding: 0;
                 flex-direction: row;
-                align-items: center;
             }
         }
 
@@ -98,16 +97,31 @@ $youtube: true;
     }
 }
 
-// .prueba {
-//     display: flex;
-//     flex-direction: column;
-// }
 
+.somos {
 
+    &__title {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
 
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    &__link {
+        border: 2px solid transparent;
+        padding: 7px;
+        border-radius: .625rem;
 
-
+        &:focus {
+            border-color: turquoise;
+        }
+    }
+}
 
 
 
