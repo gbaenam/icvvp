@@ -17,7 +17,7 @@ $youtube: true;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        max-width: 960px;
+        max-width: var(--max-width-alt);
 
         @include from(xmedium) {
             width: 75%;
@@ -58,6 +58,10 @@ $youtube: true;
         }
 
         &__info {
+
+            background-color: #f8f9fa;
+            border-radius: 10px;
+
             display: flex;
             padding: 0 1rem;
             align-items: center;
@@ -76,7 +80,7 @@ $youtube: true;
             }
 
             @include from(xlarge) {
-                padding: 0;
+                padding: 1rem 0;
                 flex-direction: row;
             }
         }
@@ -100,10 +104,35 @@ $youtube: true;
 
 .somos {
 
+    color: white;
+    background-color: var(--color-blue-one);
+    width: 100%;
+    max-width: var(--max-width-alt);
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 1.5rem 0.5rem 2rem;
+
+    &__header {
+        margin-bottom: .5rem;
+    }
+
     &__title {
         font-size: 2.2rem;
         text-transform: uppercase;
         font-weight: 300;
+        // color: white;
+    }
+
+    &__menu {
+        display: grid;
+        grid-row-gap: 20px;
+        grid-column-gap: 5px;
+
+        grid-template-areas:
+        "somos__pray somos__calendar"
+        "somos__bullhorn somos__hand"
+        "somos__church somos__map";
     }
 
     &__item {
@@ -116,10 +145,45 @@ $youtube: true;
         border: 2px solid transparent;
         padding: 7px;
         border-radius: .625rem;
+        margin-bottom: .5rem;
 
-        &:focus {
-            border-color: turquoise;
+        // &:focus {
+        //     border-color: turquoise;
+        // }
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 1.1rem;
+
+        @include from(412px) {
+            font-size: 1.5rem;
         }
+    }
+
+    // Definiendo áreas:
+    &__pray {
+        grid-area: somos__pray;
+    }
+
+    &__calendar {
+        grid-area: somos__calendar;
+    }
+
+    &__bullhorn {
+        grid-area: somos__bullhorn;
+    }
+
+    &__hand {
+        grid-area: somos__hand;
+    }
+
+    &__church {
+        grid-area: somos__church;
+    }
+
+    &__map {
+        grid-area: somos__map;
     }
 }
 

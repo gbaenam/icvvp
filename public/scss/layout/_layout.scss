@@ -8,10 +8,6 @@
     display: grid;
 }
 
-// .main-layout {
-
-// }
-
 .main-header__layout {
     --padding-header: 0 .8rem 0 .3rem;
 
@@ -66,9 +62,8 @@
 }
 
 .main__layout {
-    grid-row-gap: 2rem;
-    padding: 2rem 0;
-    // padding: 2.5rem 0 2rem;
+    grid-row-gap: 3rem;
+    padding: 2.5rem 0;
     // background-color: lightpink;
 }
 

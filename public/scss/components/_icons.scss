@@ -1,10 +1,17 @@
 .round-icon {
-    width: 120px;
-    height: 120px;
-    border: 1px solid red;
+    width: 130px;
+    height: 130px;
+    border: 3px solid #fff;
     border-radius: 50%;
     font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fff;
+
+    @include from(412px) {
+        width: 170px;
+        height: 170px;
+        font-size: 70px;
+    }
 }

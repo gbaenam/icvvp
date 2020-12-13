@@ -26,8 +26,9 @@ $breakpoints: (
 
 // Anchos y alturas.
 :root {
-    --max-width: 1200px;
     --min-width: 320px;
+    --max-width: 1200px;
+    --max-width-alt: 960px;
     --height-header: 3.5rem;
 
     // Wide 540px
@@ -69,6 +70,17 @@ $breakpoints: (
         --font-size-body: 1rem;
         --font-size-small: .8rem;
     }
+}
+
+// Variables para colores
+:root {
+    --color-dark: #0b2239;
+    --color-dark-two: #343a40;
+    --color-dark-three: #2a3b47;
+
+    --color-blue: #1b7ad1;
+    --color-blue-one: #155592;
+    --color-green: #63e6be;
 }
 
 // Variables para cursor.
