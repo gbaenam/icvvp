@@ -1,13 +1,15 @@
 .round-icon {
     width: 130px;
     height: 130px;
-    border: 3px solid var(--color-blue-one);
+    // border: 3px solid var(--color-blue-one);
+    border: 3px solid #1b7ad1;
     border-radius: 50%;
     font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-blue-one);
+    // color: var(--color-blue-one);
+    color: #1b7ad1;
 
     @include from(412px) {
         width: 150px;

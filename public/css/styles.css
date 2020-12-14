@@ -86,7 +86,7 @@
 
 body {
   margin: 0;
-  background-color: #f8f9fa;
+  background-color: #ebebeb;
   font-size: var(--font-size-body);
   font-family: var(--font-family-body); }
 
@@ -200,13 +200,13 @@ q:after {
 .round-icon {
   width: 130px;
   height: 130px;
-  border: 3px solid var(--color-blue-one);
+  border: 3px solid #1b7ad1;
   border-radius: 50%;
   font-size: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-blue-one); }
+  color: #1b7ad1; }
   @media screen and (min-width: 412px) {
     .round-icon {
       width: 150px;
@@ -729,7 +729,7 @@ q:after {
   max-width: var(--max-width-alt);
   margin-left: auto;
   margin-right: auto;
-  padding: 1rem 0.5rem 1.5rem;
+  padding: 1rem 0.625rem 1.5rem;
   background-color: #fff; }
   .somos__header {
     margin-bottom: 1rem; }
@@ -754,7 +754,7 @@ q:after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: #ebebeb;
     border-radius: 10px;
     padding-bottom: .5rem; }
   .somos__link {
