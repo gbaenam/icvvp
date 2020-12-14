@@ -17,7 +17,10 @@ $youtube: true;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+        background-color: #fff;
         max-width: var(--max-width-alt);
+
+        padding: 1rem 0 1.5rem;
 
         @include from(xmedium) {
             width: 75%;
@@ -58,10 +61,6 @@ $youtube: true;
         }
 
         &__info {
-
-            background-color: #f8f9fa;
-            border-radius: 10px;
-
             display: flex;
             padding: 0 1rem;
             align-items: center;
@@ -104,14 +103,14 @@ $youtube: true;
 
 .somos {
 
-    color: var(--color-blue-one);
-
     width: 100%;
     max-width: var(--max-width-alt);
     margin-left: auto;
     margin-right: auto;
 
-    padding: 0 0.5rem;
+    padding: 1rem 0.5rem 1.5rem;
+
+    background-color: #fff;
 
     &__header {
         margin-bottom: 1rem;
@@ -135,21 +134,26 @@ $youtube: true;
     &__menu {
         display: grid;
         grid-row-gap: 20px;
-        grid-column-gap: 5px;
+        grid-column-gap: 10px;
 
         grid-template-areas:
         "somos__pray somos__calendar"
         "somos__bullhorn somos__hand"
         "somos__church somos__map";
 
-        background-color: #f8f9fa;
-        padding: 1rem 0;
+        // padding: 1rem 0;
+        color: var(--color-blue-one);
     }
 
     &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        background-color: #f8f9fa;
+        border-radius: 10px;
+
+        padding-bottom: .5rem;
     }
 
     &__link {

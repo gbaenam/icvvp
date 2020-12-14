@@ -86,8 +86,9 @@
 
 body {
   margin: 0;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-body); }
+  background-color: #f8f9fa;
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-body); }
 
 img {
   max-width: 100%;
@@ -658,7 +659,9 @@ q:after {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--max-width-alt); }
+  background-color: #fff;
+  max-width: var(--max-width-alt);
+  padding: 1rem 0 1.5rem; }
   @media screen and (min-width: 960px) {
     .youtube {
       width: 75%; } }
@@ -693,8 +696,6 @@ q:after {
       width: 100%;
       height: 100%; }
   .youtube__info {
-    background-color: #f8f9fa;
-    border-radius: 10px;
     display: flex;
     padding: 0 1rem;
     align-items: center;
@@ -724,12 +725,12 @@ q:after {
         padding: 0 3rem 0 0; } }
 
 .somos {
-  color: var(--color-blue-one);
   width: 100%;
   max-width: var(--max-width-alt);
   margin-left: auto;
   margin-right: auto;
-  padding: 0 0.5rem; }
+  padding: 1rem 0.5rem 1.5rem;
+  background-color: #fff; }
   .somos__header {
     margin-bottom: 1rem; }
   .somos__title {
@@ -746,14 +747,16 @@ q:after {
   .somos__menu {
     display: grid;
     grid-row-gap: 20px;
-    grid-column-gap: 5px;
+    grid-column-gap: 10px;
     grid-template-areas: "somos__pray somos__calendar" "somos__bullhorn somos__hand" "somos__church somos__map";
-    background-color: #f8f9fa;
-    padding: 1rem 0; }
+    color: var(--color-blue-one); }
   .somos__item {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding-bottom: .5rem; }
   .somos__link {
     border: 2px solid transparent;
     padding: 7px;
