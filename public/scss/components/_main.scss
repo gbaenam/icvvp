@@ -17,7 +17,7 @@ $youtube: true;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        background-color: #fff;
+                    background-color: #fff;
         max-width: var(--max-width-alt);
 
         padding: 1rem 0 1.5rem;
@@ -110,14 +110,18 @@ $youtube: true;
     margin-left: auto;
     margin-right: auto;
 
-    padding: 1rem 0.625rem 1.5rem;
+    // padding: 1rem 0.625rem 1.5rem;
 
-            border-radius: 10px;
+            // border-radius: 10px;
 
-    background-color: #fff;
+            // background-color: #fff;
 
     &__header {
-        margin-bottom: 1rem;
+        margin-bottom: .4375rem;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: .5rem 0;
+
     }
 
     &__title {
@@ -138,7 +142,7 @@ $youtube: true;
     &__menu {
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        grid-gap: 10px;
+        grid-gap: 7px;
 
 
         color: var(--color-blue-one);
@@ -150,10 +154,11 @@ $youtube: true;
         align-items: center;
 
         // background-color: #f8f9fa;
-        background-color: #ebebeb;
-        border-radius: 10px;
+        background-color: #fff;
+                border-radius: 10px;
 
         padding-bottom: .5rem;
+
     }
 
     &__link {
