@@ -86,7 +86,7 @@
 
 body {
   margin: 0;
-  background-color: #ebebeb;
+  background-color: #e7e7e7;
   font-size: var(--font-size-body);
   font-family: var(--font-family-body); }
 
@@ -194,8 +194,12 @@ q:after {
   clip-path: polygon(var(--polygon-banner)); }
 
 .main__layout {
-  grid-row-gap: 3rem;
-  padding: 2.5rem 0; }
+  grid-row-gap: 1rem;
+  padding: 2.5rem .5rem; }
+  @media screen and (min-width: 360px) {
+    .main__layout {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
 
 .round-icon {
   width: 100px;
@@ -656,7 +660,8 @@ q:after {
   margin-right: auto;
   background-color: #fff;
   max-width: var(--max-width-alt);
-  padding: 1rem 0 1.5rem; }
+  padding: 1rem 0 1.5rem;
+  border-radius: 10px; }
   @media screen and (min-width: 960px) {
     .youtube {
       width: 75%; } }
@@ -725,6 +730,7 @@ q:after {
   margin-left: auto;
   margin-right: auto;
   padding: 1rem 0.625rem 1.5rem;
+  border-radius: 10px;
   background-color: #fff; }
   .somos__header {
     margin-bottom: 1rem; }
@@ -754,14 +760,13 @@ q:after {
   .somos__link {
     border: 2px solid transparent;
     padding: 7px;
-    border-radius: .625rem;
-    margin-bottom: .5rem; }
+    border-radius: .625rem; }
   .somos__text {
     text-transform: uppercase;
-    font-size: 1.1rem; }
+    font-size: .9rem; }
     @media screen and (min-width: 412px) {
       .somos__text {
-        font-size: 1.5rem; } }
+        font-size: 1.2rem; } }
 
 .aside {
   padding: 1rem;
