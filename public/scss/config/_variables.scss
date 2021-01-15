@@ -106,11 +106,11 @@ $breakpoints: (
 // Variables para button
 :root {
     --font-size-button: 1.2em;
-    --min-width-button: 16rem;
+    // --min-width-button: 16rem;
 
     @include from(360px) {
         --font-size-button: 1.3em;
-        --min-width-button: 18rem;
+        // --min-width-button: 18rem;
     }
 
     @include from(medium) {
