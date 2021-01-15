@@ -741,9 +741,8 @@ q:after {
         font-size: 2.7rem; } }
   .somos__menu {
     display: grid;
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-    grid-template-areas: "somos__pray somos__calendar" "somos__bullhorn somos__hand" "somos__church somos__map";
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
     color: var(--color-blue-one); }
   .somos__item {
     display: flex;
@@ -763,18 +762,6 @@ q:after {
     @media screen and (min-width: 412px) {
       .somos__text {
         font-size: 1.5rem; } }
-  .somos__pray {
-    grid-area: somos__pray; }
-  .somos__calendar {
-    grid-area: somos__calendar; }
-  .somos__bullhorn {
-    grid-area: somos__bullhorn; }
-  .somos__hand {
-    grid-area: somos__hand; }
-  .somos__church {
-    grid-area: somos__church; }
-  .somos__map {
-    grid-area: somos__map; }
 
 .aside {
   padding: 1rem;
