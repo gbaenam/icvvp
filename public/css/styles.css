@@ -754,14 +754,14 @@ q:after {
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    padding-bottom: .5rem; }
+    padding: 1rem 0; }
   .somos__item:nth-last-child(2) {
     border-bottom-left-radius: 10px; }
   .somos__item:last-child {
     border-bottom-right-radius: 10px; }
   .somos__link {
     border: 2px solid transparent;
-    padding: 7px;
+    padding: 0 7px 7px;
     border-radius: .625rem; }
   .somos__text {
     text-transform: uppercase;
