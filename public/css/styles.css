@@ -730,7 +730,8 @@ q:after {
   .somos__header {
     margin-bottom: .4375rem;
     background-color: #fff;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding: .5rem 0; }
   .somos__title {
     font-size: 2.2rem;
@@ -753,8 +754,11 @@ q:after {
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    border-radius: 10px;
     padding-bottom: .5rem; }
+  .somos__item:nth-last-child(2) {
+    border-bottom-left-radius: 10px; }
+  .somos__item:last-child {
+    border-bottom-right-radius: 10px; }
   .somos__link {
     border: 2px solid transparent;
     padding: 7px;
