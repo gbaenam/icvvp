@@ -194,7 +194,7 @@ q:after {
 .main__layout {
   grid-row-gap: 1rem;
   padding: 2.5rem .7rem; }
-  @media screen and (min-width: 360px) {
+  @media screen and (min-width: 412px) {
     .main__layout {
       padding-left: 1rem;
       padding-right: 1rem; } }
