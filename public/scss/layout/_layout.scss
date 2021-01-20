@@ -24,6 +24,8 @@
     }
 }
 
+// TODO: Estos dos contenedores son grid-item y deberían
+// poderse centrar con las propiedades CSS Grid.
 .main-header__layout,
 .main__layout {
     margin-left: auto;
@@ -62,15 +64,27 @@
 }
 
 .main__layout {
+
     grid-row-gap: 1rem;
     padding: 2.5rem .7rem;
 
-    @include from (412px) {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    @include from(412px) {
+        padding: 2.5rem 1rem;
     }
-    // background-color: lightpink;
+
+    @include from(medium) {
+        grid-row-gap: 2rem;
+    }
+
+    @include from(large) {
+        grid-row-gap: 3rem;
+    }
+
+    @include from(xlarge) {
+        padding: 2.5rem 0;
+    }
 }
+
 
 
 

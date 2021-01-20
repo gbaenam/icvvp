@@ -2,7 +2,7 @@
     display: block;
     content: "";
 
-    @include from(medium) {
+    @include from(768px) {
         display: inline;
     }
 }

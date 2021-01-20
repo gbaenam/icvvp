@@ -1,6 +1,6 @@
 .button {
     color: #fff;
-    padding: .5em 0;
+    padding: .5em 4em;
     position: relative;
     border-radius: 2em;
     text-transform: uppercase;
@@ -15,6 +15,4 @@
 
 .button-generic {
     font-size: var(--font-size-button);
-    min-width: var(--min-width-button);
 }
-

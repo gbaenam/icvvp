@@ -2,13 +2,11 @@
 $youtube: true;
 // $youtube: false;
 
-// .main {
-
-// }
-
 .main {
-    color: #808080;
+    // TODO: Tamaño de fuente de referencia
+    // para las unidades em.
     font-size: 1rem;
+    color: #808080;
 }
 
 // Canal de Youtube
@@ -17,15 +15,14 @@ $youtube: true;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-                    background-color: #fff;
-        max-width: var(--max-width-alt);
+        background-color: #fff;
 
         padding: 1rem 0 1.5rem;
 
         border-radius: 10px;
 
-        @include from(xmedium) {
-            width: 75%;
+        @include from(medium) {
+            border-radius: 0;
         }
 
         &__title {
@@ -47,7 +44,12 @@ $youtube: true;
             margin: 0 0 1.5rem;
         }
 
+        // TODO: Esta contenedor no se pudo centrar con Flexbox.
         &__video {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: var(--max-width-min);
+
             @include ratio(16,9);
             margin-bottom: 1.5rem;
 
@@ -62,7 +64,13 @@ $youtube: true;
             }
         }
 
+        // TODO: El centrado no se realiza con Flexbox debido al
+        // problema de centrado del vídeo.
         &__info {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: var(--max-width-min);
+
             display: flex;
             padding: 0 1rem;
             align-items: center;
@@ -81,7 +89,7 @@ $youtube: true;
             }
 
             @include from(xlarge) {
-                padding: 1rem 0;
+                padding: 0;
                 flex-direction: row;
             }
         }
@@ -96,32 +104,34 @@ $youtube: true;
 
             @include from(xlarge) {
                 margin: 0;
-                padding: 0 3rem 0 0;
+                flex-grow: 1;
+                flex-basis: 0;
+                padding-right: 1rem;
             }
         }
     }
 }
 
-
+// TODO: Contenedor pendiente de centrar desde el main.
 .somos {
-
     width: 100%;
-    max-width: var(--max-width-alt);
     margin-left: auto;
     margin-right: auto;
 
-    // padding: 1rem 0.625rem 1.5rem;
-
-
-            // background-color: #fff;
-
     &__header {
+        padding: .5rem 0;
         margin-bottom: .4375rem;
         background-color: #fff;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        padding: .5rem 0;
 
+        @include from(medium) {
+            border-radius: 0;
+        }
+
+        @include from(768px) {
+            padding: 1.2rem 0;
+        }
     }
 
     &__title {
@@ -144,8 +154,10 @@ $youtube: true;
         grid-template-columns: repeat(2,1fr);
         grid-gap: 7px;
 
+        @include from(medium) {
+            grid-template-columns: repeat(3,1fr);
+        }
 
-        color: var(--color-blue-one);
     }
 
     &__item {
@@ -153,20 +165,46 @@ $youtube: true;
         flex-direction: column;
         align-items: center;
 
-        // background-color: #f8f9fa;
         background-color: #fff;
 
         padding: 1rem 0;
 
+        &:last-child {
+            border-bottom-right-radius: 10px;
+        }
+
+        &:nth-last-child(2) {
+            border-bottom-left-radius: 10px;
+        }
+
+
+        @include from(medium) {
+
+            &:last-child {
+                border-bottom-right-radius: 0;
+            }
+
+            &:nth-last-child(2) {
+                border-bottom-left-radius: 0;
+            }
+
+            // TODO:No funciona "border-radius: 0"
+            // & {
+            //     border-radius: 0;
+            // }
+        }
     }
 
-    &__item:nth-last-child(2) {
-        border-bottom-left-radius: 10px;
-    }
+    // @include from(medium) {
 
-    &__item:last-child {
-        border-bottom-right-radius: 10px;
-    }
+    //     &__item:last-child {
+    //         border-bottom-right-radius: 0;
+    //     }
+
+    //     &__item:nth-last-child(2) {
+    //         border-bottom-left-radius: 0;
+    //     }
+    // }
 
     &__link {
         border: 2px solid transparent;

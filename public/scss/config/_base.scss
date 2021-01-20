@@ -7,11 +7,9 @@
 
 body {
     margin: 0;
-    // background-color: #f8f9fa;
-    // background-color: #ebebeb;
-    background-color: #e7e7e7;
     font-size: var(--font-size-body);
     font-family: var(--font-family-body);
+    background-color: var(--background-color-body);
 }
 
 // Reset <img>

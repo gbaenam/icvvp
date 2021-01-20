@@ -28,6 +28,7 @@ $breakpoints: (
 :root {
     --min-width: 320px;
     --max-width: 1200px;
+    --max-width-min: 800px;
     --max-width-alt: 960px;
     --height-header: 3.5rem;
 
@@ -81,6 +82,13 @@ $breakpoints: (
     --color-blue: #1b7ad1;
     --color-blue-one: #155592;
     --color-green: #63e6be;
+
+    // body
+    --background-color-body: #e7e7e7;
+    // --background-color-body: #e7e7e7;
+    @include from(xlarge) {
+        --background-color-body: #fbfbfe;
+    }
 }
 
 // Variables para cursor.
@@ -106,25 +114,17 @@ $breakpoints: (
 // Variables para button
 :root {
     --font-size-button: 1.2em;
-    // --min-width-button: 16rem;
 
     @include from(360px) {
         --font-size-button: 1.3em;
-        // --min-width-button: 18rem;
     }
 
     @include from(medium) {
-        --min-width-button: 19rem;
-    }
-
-    @include from(xmedium) {
         --font-size-button: 1.4em;
-        --min-width-button: 20rem;
     }
 
-    @include from(xlarge) {
-        --font-size-button: 1.6em;
-        --min-width-button: 22rem;
+    @include from(large) {
+        --font-size-button: 1.5em;
     }
 }
 
