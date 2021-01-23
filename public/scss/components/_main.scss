@@ -25,6 +25,14 @@ $youtube: true;
 
         padding: 1rem 0 1.5rem;
 
+        @include from(medium) {
+            padding: 1.5rem 0 2rem;
+        }
+
+        @include from(xxlarge) {
+            padding: 2rem 0 2.5rem;
+        }
+
         border-radius: 10px;
 
         // TODO: La sombra de las cajas se debe aplicar sin
