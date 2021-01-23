@@ -8,7 +8,7 @@
 :root {
   --min-width: 320px;
   --max-width: 1200px;
-  --max-width-min: 800px;
+  --max-width-min: 720px;
   --max-width-alt: 960px;
   --height-header: 3.5rem; }
   @media screen and (min-width: 540px) {
@@ -70,10 +70,7 @@
   @media screen and (min-width: 360px) {
     :root {
       --font-size-button: 1.3em; } }
-  @media screen and (min-width: 640px) {
-    :root {
-      --font-size-button: 1.4em; } }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1600px) {
     :root {
       --font-size-button: 1.5em; } }
 
@@ -661,11 +658,10 @@ q:after {
 
 .youtube {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #fff;
   padding: 1rem 0 1.5rem;
-  border-radius: 10px; }
+  border-radius: 10px;
+  box-shadow: 0 0 9px -7px rgba(0, 0, 0, 0.8); }
   @media screen and (min-width: 640px) {
     .youtube {
       border-radius: 0; } }
@@ -690,14 +686,14 @@ q:after {
     position: relative;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(9, 1fr);
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1rem; }
     .youtube__video::before {
       content: "";
       display: block;
       padding-bottom: 100%; }
     @media screen and (min-width: 1280px) {
       .youtube__video {
-        margin-bottom: 2.5rem; } }
+        margin-bottom: 1.5rem; } }
     .youtube__video > iframe, .youtube__video video {
       position: absolute;
       width: 100%;
@@ -707,39 +703,24 @@ q:after {
     margin-right: auto;
     max-width: var(--max-width-min);
     display: flex;
-    padding: 0 1rem;
+    padding: 0 .5rem;
     align-items: center;
     flex-direction: column; }
-    @media screen and (min-width: 360px) {
+    @media screen and (min-width: 540px) {
       .youtube__info {
-        padding: 0 1.5rem; } }
-    @media screen and (min-width: 412px) {
-      .youtube__info {
-        padding: 0 2rem; } }
+        padding: 0 .7rem; } }
     @media screen and (min-width: 640px) {
       .youtube__info {
-        padding: 0 3rem; } }
-    @media screen and (min-width: 1280px) {
-      .youtube__info {
-        padding: 0;
-        flex-direction: row; } }
+        padding: 0 1rem; } }
   .youtube__text {
     text-align: left;
     margin: 0 0 2rem; }
     @media screen and (min-width: 640px) {
       .youtube__text {
         margin: 0 0 2.5rem; } }
-    @media screen and (min-width: 1280px) {
-      .youtube__text {
-        margin: 0;
-        flex-grow: 1;
-        flex-basis: 0;
-        padding-right: 1rem; } }
 
 .somos {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
+  width: 100%; }
   .somos__header {
     padding: .5rem 0;
     margin-bottom: .4375rem;
@@ -790,8 +771,8 @@ q:after {
     padding: 0 7px 7px;
     border-radius: .625rem; }
   .somos__text {
-    text-transform: uppercase;
-    font-size: .9rem; }
+    font-size: .9rem;
+    text-transform: uppercase; }
     @media screen and (min-width: 412px) {
       .somos__text {
         font-size: 1.2rem; } }

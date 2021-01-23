@@ -28,7 +28,7 @@ $breakpoints: (
 :root {
     --min-width: 320px;
     --max-width: 1200px;
-    --max-width-min: 800px;
+    --max-width-min: 720px;
     --max-width-alt: 960px;
     --height-header: 3.5rem;
 
@@ -84,8 +84,8 @@ $breakpoints: (
     --color-green: #63e6be;
 
     // body
+    // --background-color-body: #fbfbfe;
     --background-color-body: #e7e7e7;
-    // --background-color-body: #e7e7e7;
     @include from(xlarge) {
         --background-color-body: #fbfbfe;
     }
@@ -119,11 +119,11 @@ $breakpoints: (
         --font-size-button: 1.3em;
     }
 
-    @include from(medium) {
-        --font-size-button: 1.4em;
-    }
+    // @include from(medium) {
+    //     --font-size-button: 1.4em;
+    // }
 
-    @include from(large) {
+    @include from(zlarge) {
         --font-size-button: 1.5em;
     }
 }

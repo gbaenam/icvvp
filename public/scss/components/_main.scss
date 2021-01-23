@@ -6,20 +6,30 @@ $youtube: true;
     // TODO: Tamaño de fuente de referencia
     // para las unidades em.
     font-size: 1rem;
+
+    // TODO: Tanto el tamaño de los titulares como el
+    // color de la fuente se debe trabajar a través de variables
+    // definidas en _variables.scss
     color: #808080;
+    // color: rgb(42, 59, 71);
 }
 
 // Canal de Youtube
 @if $youtube {
     .youtube {
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        // TODO: Esta sección está centrada desde su contenedor en "_layout.scss"
+        // margin-left: auto;
+        // margin-right: auto;
         background-color: #fff;
 
         padding: 1rem 0 1.5rem;
 
         border-radius: 10px;
+
+        // TODO: La sombra de las cajas se debe aplicar sin
+        // repetir el código de caja en caja.
+        box-shadow: 0 0 9px -7px rgba(0,0,0,.8);
 
         @include from(medium) {
             border-radius: 0;
@@ -51,10 +61,10 @@ $youtube: true;
             max-width: var(--max-width-min);
 
             @include ratio(16,9);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
 
             @include from(xlarge) {
-                margin-bottom: 2.5rem;
+                margin-bottom: 1.5rem;
             }
 
             > iframe, video {
@@ -72,25 +82,16 @@ $youtube: true;
             max-width: var(--max-width-min);
 
             display: flex;
-            padding: 0 1rem;
+            padding: 0 .5rem;
             align-items: center;
             flex-direction: column;
 
-            @include from(360px) {
-                padding: 0 1.5rem;
-            }
-
-            @include from(412px) {
-                padding: 0 2rem;
+            @include from(540px) {
+                padding: 0 .7rem;
             }
 
             @include from(medium) {
-                padding: 0 3rem;
-            }
-
-            @include from(xlarge) {
-                padding: 0;
-                flex-direction: row;
+                padding: 0 1rem;
             }
         }
 
@@ -101,22 +102,15 @@ $youtube: true;
             @include from(medium) {
                 margin: 0 0 2.5rem;
             }
-
-            @include from(xlarge) {
-                margin: 0;
-                flex-grow: 1;
-                flex-basis: 0;
-                padding-right: 1rem;
-            }
         }
     }
 }
 
-// TODO: Contenedor pendiente de centrar desde el main.
+// TODO: Esta sección está centrada desde su contenedor en "_layout.scss"
 .somos {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
 
     &__header {
         padding: .5rem 0;
@@ -195,17 +189,6 @@ $youtube: true;
         }
     }
 
-    // @include from(medium) {
-
-    //     &__item:last-child {
-    //         border-bottom-right-radius: 0;
-    //     }
-
-    //     &__item:nth-last-child(2) {
-    //         border-bottom-left-radius: 0;
-    //     }
-    // }
-
     &__link {
         border: 2px solid transparent;
         padding: 0 7px 7px;
@@ -218,8 +201,8 @@ $youtube: true;
     }
 
     &__text {
-        text-transform: uppercase;
         font-size: .9rem;
+        text-transform: uppercase;
 
         @include from(412px) {
             font-size: 1.2rem;
