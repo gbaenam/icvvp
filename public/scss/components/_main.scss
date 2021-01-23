@@ -160,6 +160,10 @@ $youtube: true;
             grid-template-columns: repeat(3,1fr);
         }
 
+        @include from(large) {
+            grid-template-columns: repeat(12,1fr);
+        }
+
     }
 
     &__item {
