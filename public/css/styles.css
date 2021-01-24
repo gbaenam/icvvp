@@ -663,17 +663,24 @@ q:after {
 
 .youtube {
   width: 100%;
+  background-color: #fff;
   padding: 1rem 0 1.5rem;
   border-radius: 10px; }
   @media screen and (min-width: 640px) {
     .youtube {
       padding: 1.5rem 0 2rem; } }
+  @media screen and (min-width: 1024px) {
+    .youtube {
+      background-color: transparent; } }
   @media screen and (min-width: 1440px) {
     .youtube {
       padding: 2rem 0 2.5rem; } }
   @media screen and (min-width: 640px) {
     .youtube {
       border-radius: 0; } }
+  @media screen and (min-width: 1024px) {
+    .youtube {
+      padding: 1rem 0 0; } }
   .youtube__title {
     font-size: 2.2rem;
     text-transform: uppercase;
