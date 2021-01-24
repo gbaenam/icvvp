@@ -47,7 +47,7 @@
   --color-blue-one: #155592;
   --color-green: #63e6be;
   --background-color-body: #e7e7e7; }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1024px) {
     :root {
       --background-color-body: #fbfbfe; } }
 
@@ -214,6 +214,11 @@ q:after {
   justify-content: center;
   align-items: center;
   color: #1b7ad1; }
+  @media screen and (min-width: 1024px) {
+    .round-icon {
+      width: 6.25rem;
+      height: 6.25rem;
+      font-size: 45px; } }
 
 .button {
   color: #fff;
@@ -658,10 +663,8 @@ q:after {
 
 .youtube {
   width: 100%;
-  background-color: #fff;
   padding: 1rem 0 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 9px -7px rgba(0, 0, 0, 0.8); }
+  border-radius: 10px; }
   @media screen and (min-width: 640px) {
     .youtube {
       padding: 1.5rem 0 2rem; } }
@@ -739,6 +742,9 @@ q:after {
     @media screen and (min-width: 768px) {
       .somos__header {
         padding: 1.2rem 0; } }
+    @media screen and (min-width: 1024px) {
+      .somos__header {
+        background-color: transparent; } }
   .somos__title {
     font-size: 2.2rem;
     text-transform: uppercase;
@@ -757,6 +763,11 @@ q:after {
     @media screen and (min-width: 640px) {
       .somos__menu {
         grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (min-width: 1024px) {
+      .somos__menu {
+        padding: 0 8rem;
+        grid-column-gap: 50px;
+        grid-row-gap: 40px; } }
   .somos__item {
     display: flex;
     flex-direction: column;
@@ -768,14 +779,20 @@ q:after {
     .somos__item:nth-last-child(2) {
       border-bottom-left-radius: 10px; }
     @media screen and (min-width: 640px) {
-      .somos__item:last-child {
-        border-bottom-right-radius: 0; }
-      .somos__item:nth-last-child(2) {
-        border-bottom-left-radius: 0; } }
+      .somos__item {
+        border-radius: 0 !important; } }
+    @media screen and (min-width: 1024px) {
+      .somos__item {
+        padding: 1.5rem 0;
+        border-radius: 20px !important;
+        box-shadow: 0 0 9px -7px rgba(0, 0, 0, 0.8); } }
   .somos__link {
     border: 2px solid transparent;
     padding: 0 7px 7px;
     border-radius: .625rem; }
+    @media screen and (min-width: 1024px) {
+      .somos__link {
+        margin-bottom: 1rem; } }
   .somos__text {
     font-size: .9rem;
     text-transform: uppercase; }

@@ -86,7 +86,7 @@ $breakpoints: (
     // body
     // --background-color-body: #fbfbfe;
     --background-color-body: #e7e7e7;
-    @include from(xlarge) {
+    @include from(large) {
         --background-color-body: #fbfbfe;
     }
 }

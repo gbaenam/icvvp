@@ -11,9 +11,9 @@
     // color: var(--color-blue-one);
     color: #1b7ad1;
 
-    // @include from(412px) {
-    //     width: 150px;
-    //     height: 150px;
-    //     font-size: 70px;
-    // }
+    @include from(large) {
+        width: 6.25rem;
+        height: 6.25rem;
+        font-size: 45px;
+    }
 }
