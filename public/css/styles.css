@@ -692,6 +692,9 @@ q:after {
     @media screen and (min-width: 412px) {
       .youtube__title {
         font-size: 2.7rem; } }
+    @media screen and (min-width: 1280px) {
+      .youtube__title {
+        font-size: 2.9rem; } }
   .youtube__subtitle {
     margin: 0 0 1.5rem; }
   .youtube__video {
@@ -763,6 +766,9 @@ q:after {
     @media screen and (min-width: 412px) {
       .somos__title {
         font-size: 2.7rem; } }
+    @media screen and (min-width: 1280px) {
+      .somos__title {
+        font-size: 2.9rem; } }
   .somos__menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -791,8 +797,10 @@ q:after {
     @media screen and (min-width: 1024px) {
       .somos__item {
         padding: 1.5rem 0;
-        border-radius: 20px !important;
-        box-shadow: 0 0 9px -7px rgba(0, 0, 0, 0.8); } }
+        border-radius: 5px !important;
+        border: 1px solid #ccc; }
+        .somos__item:hover {
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); } }
   .somos__link {
     border: 2px solid transparent;
     padding: 0 7px 7px;
@@ -801,11 +809,15 @@ q:after {
       .somos__link {
         margin-bottom: 1rem; } }
   .somos__text {
+    color: #1b7ad1;
     font-size: .9rem;
     text-transform: uppercase; }
     @media screen and (min-width: 412px) {
       .somos__text {
         font-size: 1.2rem; } }
+    @media screen and (min-width: 1024px) {
+      .somos__text {
+        font-size: 1.4rem; } }
 
 .aside {
   padding: 1rem;
